@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Puffin Jiang&#39;s Blog</title>
-    <link>https://puffinjiang.github.io/</link>
-    <description>Recent content on Puffin Jiang&#39;s Blog</description>
+    <title>archives on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/categories/archives/</link>
+    <description>Recent content in archives on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Aug 2022 18:25:18 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>🤝友链</title>
-      <link>https://puffinjiang.github.io/links/</link>
-      <pubDate>Thu, 25 Aug 2022 10:59:32 +0800</pubDate>
-      
-      <guid>https://puffinjiang.github.io/links/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 24 Aug 2022 18:25:18 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/archives/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PostgreSQL数据库常用操作</title>
       <link>https://puffinjiang.github.io/posts/tool/postgresql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</link>
@@ -25,8 +16,6 @@
       <description>记录一些常用的PostgreSQL数据库操作命令</description>
     </item>
     
-    
-    
     <item>
       <title>Git推送代码失败</title>
       <link>https://puffinjiang.github.io/posts/tool/git%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81%E5%A4%B1%E8%B4%A5/</link>
@@ -34,15 +23,6 @@
       
       <guid>https://puffinjiang.github.io/posts/tool/git%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81%E5%A4%B1%E8%B4%A5/</guid>
       <description>在使用 git push时报 remote: error: GH007: Your push would publish a private email address.</description>
-    </item>
-    
-    <item>
-      <title>🙋🏻‍♂️关于我</title>
-      <link>https://puffinjiang.github.io/about/</link>
-      <pubDate>Wed, 24 Aug 2022 10:20:53 +0800</pubDate>
-      
-      <guid>https://puffinjiang.github.io/about/</guid>
-      <description>欢迎访问我的小站</description>
     </item>
     
   </channel>
