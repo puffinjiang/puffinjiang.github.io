@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Aug 2022 18:25:18 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Aug 2022 18:34:15 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Celery</title>
+      <link>https://puffinjiang.github.io/tags/celery/</link>
+      <pubDate>Wed, 31 Aug 2022 18:34:15 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/celery/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>PostgreSQL</title>
       <link>https://puffinjiang.github.io/tags/postgresql/</link>

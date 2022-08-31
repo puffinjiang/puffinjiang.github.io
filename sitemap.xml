@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://puffinjiang.github.io/tags/celery/</loc>
+    <lastmod>2022-08-31T18:34:15+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/tech/celery%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E8%A7%A3%E5%86%B3/</loc>
+    <lastmod>2022-08-31T18:34:15+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/</loc>
+    <lastmod>2022-08-31T18:34:15+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/</loc>
+    <lastmod>2022-08-31T18:34:15+08:00</lastmod>
+  </url><url>
     <loc>https://puffinjiang.github.io/links/</loc>
     <lastmod>2022-08-25T10:59:32+08:00</lastmod>
   </url><url>
@@ -15,12 +27,6 @@
     <lastmod>2022-08-24T18:25:18+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/posts/tool/postgresql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2022-08-24T18:25:18+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/</loc>
-    <lastmod>2022-08-24T18:25:18+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/</loc>
     <lastmod>2022-08-24T18:25:18+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/archives/</loc>
