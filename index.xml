@@ -6,7 +6,16 @@
     <description>Recent content on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Oct 2022 22:48:48 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Nov 2022 16:50:57 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Utools Cannot Get New Env From System</title>
+      <link>https://puffinjiang.github.io/posts/tool/utoolscannotgetnewenvfromsystem/</link>
+      <pubDate>Wed, 09 Nov 2022 16:50:57 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/tool/utoolscannotgetnewenvfromsystem/</guid>
+      <description>utools无法及时更新最新的系统环境变量，导致在使用powershell等命令行工具时无法读取相应的环境变量</description>
+    </item>
+    
     <item>
       <title>Upgrade brew error after updating MacOS</title>
       <link>https://puffinjiang.github.io/posts/tool/upgradebrewerrorafterupdatingmacos/</link>
