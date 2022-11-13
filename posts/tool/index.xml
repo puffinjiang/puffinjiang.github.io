@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Aug 2022 12:41:35 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/posts/tool/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Limit Of MongoDB Index</title>
+      <link>https://puffinjiang.github.io/posts/tool/indexlimitofmongodb/</link>
+      <pubDate>Sun, 13 Nov 2022 18:56:59 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/tool/indexlimitofmongodb/</guid>
+      <description>使用MongoDB时，索引相关的限制和优化</description>
+    </item>
+    
+    <item>
       <title>Utools Cannot Get New Env From System</title>
       <link>https://puffinjiang.github.io/posts/tool/utoolscannotgetnewenvfromsystem/</link>
       <pubDate>Wed, 09 Nov 2022 16:50:57 +0800</pubDate>

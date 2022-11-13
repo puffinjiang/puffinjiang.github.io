@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Utools Cannot Get New Env From System | Puffin Jiang&#39;s Blog</title>
-<meta name="keywords" content="Utools">
-<meta name="description" content="utools无法及时更新最新的系统环境变量，导致在使用powershell等命令行工具时无法读取相应的环境变量">
+<title>Limit Of MongoDB Index | Puffin Jiang&#39;s Blog</title>
+<meta name="keywords" content="标签1">
+<meta name="description" content="使用MongoDB时，索引相关的限制和优化">
 <meta name="author" content="
 作者：Puffin Jiang">
-<link rel="canonical" href="https://puffinjiang.github.io/posts/tool/utoolscannotgetnewenvfromsystem/">
+<link rel="canonical" href="https://puffinjiang.github.io/posts/tool/indexlimitofmongodb/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.917b8a9c0af84d2f14d42faf266afa38b0b7354667fbffde466693ed07045bef.css" integrity="sha256-kXuKnAr4TS8U1C&#43;vJmr6OLC3NUZn&#43;//eRmaT7QcEW&#43;8=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -57,16 +57,16 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Utools Cannot Get New Env From System" />
-<meta property="og:description" content="utools无法及时更新最新的系统环境变量，导致在使用powershell等命令行工具时无法读取相应的环境变量" />
+</noscript><meta property="og:title" content="Limit Of MongoDB Index" />
+<meta property="og:description" content="使用MongoDB时，索引相关的限制和优化" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://puffinjiang.github.io/posts/tool/utoolscannotgetnewenvfromsystem/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-11-09T16:50:57+08:00" />
-<meta property="article:modified_time" content="2022-11-09T16:50:57+08:00" />
+<meta property="og:url" content="https://puffinjiang.github.io/posts/tool/indexlimitofmongodb/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-13T18:56:59+08:00" />
+<meta property="article:modified_time" content="2022-11-13T18:56:59+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Utools Cannot Get New Env From System"/>
-<meta name="twitter:description" content="utools无法及时更新最新的系统环境变量，导致在使用powershell等命令行工具时无法读取相应的环境变量"/>
+<meta name="twitter:title" content="Limit Of MongoDB Index"/>
+<meta name="twitter:description" content="使用MongoDB时，索引相关的限制和优化"/>
 
 
 <script type="application/ld+json">
@@ -89,8 +89,8 @@
     {
       "@type": "ListItem",
       "position":  4 ,
-      "name": "Utools Cannot Get New Env From System",
-      "item": "https://puffinjiang.github.io/posts/tool/utoolscannotgetnewenvfromsystem/"
+      "name": "Limit Of MongoDB Index",
+      "item": "https://puffinjiang.github.io/posts/tool/indexlimitofmongodb/"
     }
   ]
 }
@@ -99,24 +99,24 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Utools Cannot Get New Env From System",
-  "name": "Utools Cannot Get New Env From System",
-  "description": "utools无法及时更新最新的系统环境变量，导致在使用powershell等命令行工具时无法读取相应的环境变量",
+  "headline": "Limit Of MongoDB Index",
+  "name": "Limit Of MongoDB Index",
+  "description": "使用MongoDB时，索引相关的限制和优化",
   "keywords": [
-    "Utools"
+    "标签1"
   ],
-  "articleBody": "Utools未实时更新环境变量配置导致命令行工具使用错误 背景 今天在使用 utools工具打开 powershell 安装 scoop ，scoop 安装成功后，可以使用 scoop 相关命令，重新打开 powershell 后使用 scoop 命令无法识别。\n问题复现 打开utools\n使用utools打开powershell\n使用powershell安装scoop\n在powershell使用scoop help命令\n关闭powershell，使用utools重新打开powershell\n在powershell中使用scoop help命令\n此时出现如下的错误信息：\n1 2 3 4 5 6 7 D : 无法将“D”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后 再试一次。 所在位置 行:1 字符: 1 + D + ~ + CategoryInfo : ObjectNotFound: (D:String) [], CommandNotFoundException + FullyQualifiedErrorId : CommandNotFoundException 解决方法 重新启动 utools\n",
-  "wordCount" : "343",
+  "articleBody": "额外开销 每个索引占据一定的存储空间，在进行插入，更新和删除操作时也需要对索引进行操作。所以，如果你很少对集合进行读取操作，建议不使用索引。\n内存(RAM)使用 由于索引是存储在内存(RAM)中,你应该确保该索引的大小不超过内存的限制。\n如果索引的大小大于内存的限制，MongoDB会删除一些索引，这将导致性能下降。\n查询限制 索引不能被以下的查询使用：\n正则表达式及非操作符，如 $nin, $not, 等。 算术运算符，如 $mod, 等。 $where 子句 所以，检测你的语句是否使用索引是一个好的习惯，可以用explain来查看。\n索引键限制 从2.6版本开始，如果现有的索引字段的值超过索引键的限制，MongoDB中不会创建索引。\n插入文档超过索引键限制 如果文档的索引字段值超过了索引键的限制，MongoDB不会将任何文档转换成索引的集合。与mongorestore和mongoimport工具类似。\n最大范围 集合中索引不能超过64个 索引名的长度不能超过128个字符 一个复合索引最多可以有31个字段 ",
+  "wordCount" : "418",
   "inLanguage": "en",
-  "datePublished": "2022-11-09T16:50:57+08:00",
-  "dateModified": "2022-11-09T16:50:57+08:00",
+  "datePublished": "2022-11-13T18:56:59+08:00",
+  "dateModified": "2022-11-13T18:56:59+08:00",
   "author":[{
     "@type": "Person",
     "name": "Puffin Jiang"
   }],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://puffinjiang.github.io/posts/tool/utoolscannotgetnewenvfromsystem/"
+    "@id": "https://puffinjiang.github.io/posts/tool/indexlimitofmongodb/"
   },
   "publisher": {
     "@type": "Organization",
@@ -216,8 +216,11 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://puffinjiang.github.io">Home</a>&nbsp;»&nbsp;<a href="https://puffinjiang.github.io/posts/">📚文章</a>&nbsp;»&nbsp;<a href="https://puffinjiang.github.io/posts/tool/">🛠️工具</a></div>
     <h1 class="post-title">
-      Utools Cannot Get New Env From System
+      Limit Of MongoDB Index
     </h1>
+    <div class="post-description">
+      使用MongoDB时，索引相关的限制和优化
+    </div>
     <div class="post-meta">
 
 
@@ -229,7 +232,7 @@
 
 
 
-创建:&nbsp;<span title='2022-11-09 16:50:57 +0800 +0800'>2022-11-09</span>&nbsp;|&nbsp;更新:&nbsp;2022-11-09&nbsp;|&nbsp;字数:&nbsp;343字&nbsp;|&nbsp;时长: 1分钟&nbsp;|&nbsp;
+创建:&nbsp;<span title='2022-11-13 18:56:59 +0800 +0800'>2022-11-13</span>&nbsp;|&nbsp;更新:&nbsp;2022-11-13&nbsp;|&nbsp;字数:&nbsp;418字&nbsp;|&nbsp;时长: 1分钟&nbsp;|&nbsp;
 作者：Puffin Jiang
 
 </div>
@@ -242,17 +245,18 @@
 
             <div class="inner"><ul>
                     <li>
-                        <a href="#utools%e6%9c%aa%e5%ae%9e%e6%97%b6%e6%9b%b4%e6%96%b0%e7%8e%af%e5%a2%83%e5%8f%98%e9%87%8f%e9%85%8d%e7%bd%ae%e5%af%bc%e8%87%b4%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8%e9%94%99%e8%af%af" aria-label="Utools未实时更新环境变量配置导致命令行工具使用错误">Utools未实时更新环境变量配置导致命令行工具使用错误</a><ul>
-                            
+                        <a href="#%e9%a2%9d%e5%a4%96%e5%bc%80%e9%94%80" aria-label="额外开销">额外开销</a></li>
                     <li>
-                        <a href="#%e8%83%8c%e6%99%af" aria-label="背景">背景</a></li>
+                        <a href="#%e5%86%85%e5%ad%98ram%e4%bd%bf%e7%94%a8" aria-label="内存(RAM)使用">内存(RAM)使用</a></li>
                     <li>
-                        <a href="#%e9%97%ae%e9%a2%98%e5%a4%8d%e7%8e%b0" aria-label="问题复现">问题复现</a></li>
+                        <a href="#%e6%9f%a5%e8%af%a2%e9%99%90%e5%88%b6" aria-label="查询限制">查询限制</a></li>
                     <li>
-                        <a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95" aria-label="解决方法">解决方法</a>
+                        <a href="#%e7%b4%a2%e5%bc%95%e9%94%ae%e9%99%90%e5%88%b6" aria-label="索引键限制">索引键限制</a></li>
+                    <li>
+                        <a href="#%e6%8f%92%e5%85%a5%e6%96%87%e6%a1%a3%e8%b6%85%e8%bf%87%e7%b4%a2%e5%bc%95%e9%94%ae%e9%99%90%e5%88%b6" aria-label="插入文档超过索引键限制">插入文档超过索引键限制</a></li>
+                    <li>
+                        <a href="#%e6%9c%80%e5%a4%a7%e8%8c%83%e5%9b%b4" aria-label="最大范围">最大范围</a>
                     </li>
-                </ul>
-                </li>
                 </ul>
             </div>
         </details>
@@ -317,71 +321,42 @@
         return rect.top + win.pageYOffset;   
     }
 </script>
-  <div class="post-content"><h1 id="utools未实时更新环境变量配置导致命令行工具使用错误">Utools未实时更新环境变量配置导致命令行工具使用错误<a hidden class="anchor" aria-hidden="true" href="#utools未实时更新环境变量配置导致命令行工具使用错误">#</a></h1>
-<h2 id="背景">背景<a hidden class="anchor" aria-hidden="true" href="#背景">#</a></h2>
-<p>今天在使用 utools工具打开 <code>powershell</code> 安装 <code>scoop</code> ，<code>scoop</code> 安装成功后，可以使用 <code>scoop</code> 相关命令，重新打开 <code>powershell</code> 后使用 <code>scoop</code> 命令无法识别。</p>
-<h2 id="问题复现">问题复现<a hidden class="anchor" aria-hidden="true" href="#问题复现">#</a></h2>
-<ol>
-<li>
-<p>打开utools</p>
-</li>
-<li>
-<p>使用utools打开powershell</p>
-</li>
-<li>
-<p>使用powershell安装scoop</p>
-</li>
-<li>
-<p>在powershell使用scoop help命令</p>
-</li>
-<li>
-<p>关闭powershell，使用utools重新打开powershell</p>
-</li>
-<li>
-<p>在powershell中使用scoop help命令</p>
-<p>此时出现如下的错误信息：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">5
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">6
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">7
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>D : 无法将“D”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后
-</span></span><span style="display:flex;"><span>再试一次。
-</span></span><span style="display:flex;"><span>所在位置 行:1 字符: 1
-</span></span><span style="display:flex;"><span>+ D
-</span></span><span style="display:flex;"><span>+ ~
-</span></span><span style="display:flex;"><span>    + CategoryInfo          : ObjectNotFound: (D:String) [], CommandNotFoundException
-</span></span><span style="display:flex;"><span>    + FullyQualifiedErrorId : CommandNotFoundException
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ol>
-<h2 id="解决方法">解决方法<a hidden class="anchor" aria-hidden="true" href="#解决方法">#</a></h2>
-<p>重新启动 utools</p>
+  <div class="post-content"><h2 id="额外开销">额外开销<a hidden class="anchor" aria-hidden="true" href="#额外开销">#</a></h2>
+<p>每个索引占据一定的存储空间，在进行插入，更新和删除操作时也需要对索引进行操作。所以，如果你很少对集合进行读取操作，建议不使用索引。</p>
+<h2 id="内存ram使用">内存(RAM)使用<a hidden class="anchor" aria-hidden="true" href="#内存ram使用">#</a></h2>
+<p>由于索引是存储在内存(RAM)中,你应该确保该索引的大小不超过内存的限制。</p>
+<p>如果索引的大小大于内存的限制，MongoDB会删除一些索引，这将导致性能下降。</p>
+<h2 id="查询限制">查询限制<a hidden class="anchor" aria-hidden="true" href="#查询限制">#</a></h2>
+<p>索引不能被以下的查询使用：</p>
+<ul>
+<li>正则表达式及非操作符，如 $nin, $not, 等。</li>
+<li>算术运算符，如 $mod, 等。</li>
+<li>$where 子句</li>
+</ul>
+<p>所以，检测你的语句是否使用索引是一个好的习惯，可以用explain来查看。</p>
+<h2 id="索引键限制">索引键限制<a hidden class="anchor" aria-hidden="true" href="#索引键限制">#</a></h2>
+<p>从2.6版本开始，如果现有的索引字段的值超过索引键的限制，MongoDB中不会创建索引。</p>
+<h2 id="插入文档超过索引键限制">插入文档超过索引键限制<a hidden class="anchor" aria-hidden="true" href="#插入文档超过索引键限制">#</a></h2>
+<p>如果文档的索引字段值超过了索引键的限制，MongoDB不会将任何文档转换成索引的集合。与mongorestore和mongoimport工具类似。</p>
+<h2 id="最大范围">最大范围<a hidden class="anchor" aria-hidden="true" href="#最大范围">#</a></h2>
+<ul>
+<li>集合中索引不能超过64个</li>
+<li>索引名的长度不能超过128个字符</li>
+<li>一个复合索引最多可以有31个字段</li>
+</ul>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://puffinjiang.github.io/tags/utools/">Utools</a></li>
+      <li><a href="https://puffinjiang.github.io/tags/%E6%A0%87%E7%AD%BE1/">标签1</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://puffinjiang.github.io/posts/tool/indexlimitofmongodb/">
-    <span class="title">« Prev</span>
-    <br>
-    <span>Limit Of MongoDB Index</span>
-  </a>
-  <a class="next" href="https://puffinjiang.github.io/posts/tool/upgradebrewerrorafterupdatingmacos/">
+  <a class="next" href="https://puffinjiang.github.io/posts/tool/utoolscannotgetnewenvfromsystem/">
     <span class="title">Next »</span>
     <br>
-    <span>Upgrade brew error after updating MacOS</span>
+    <span>Utools Cannot Get New Env From System</span>
   </a>
 </nav>
 
