@@ -6,7 +6,25 @@
     <description>Recent content on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Nov 2022 18:56:59 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Nov 2022 12:28:59 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remote Login Of Ubuntu Server Setting</title>
+      <link>https://puffinjiang.github.io/posts/tool/remoteloginofubuntuserversetting/</link>
+      <pubDate>Wed, 16 Nov 2022 12:28:59 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/tool/remoteloginofubuntuserversetting/</guid>
+      <description>Ubuntu 开启ssh远程连接服务</description>
+    </item>
+    
+    <item>
+      <title>Deploy Service With Docker Compose</title>
+      <link>https://puffinjiang.github.io/posts/tool/deployservicewithdockercompose/</link>
+      <pubDate>Wed, 16 Nov 2022 12:16:06 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/tool/deployservicewithdockercompose/</guid>
+      <description>使用docker-compose部署常用的服务</description>
+    </item>
+    
     <item>
       <title>Limit Of MongoDB Index</title>
       <link>https://puffinjiang.github.io/posts/tool/indexlimitofmongodb/</link>

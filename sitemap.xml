@@ -2,16 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://puffinjiang.github.io/</loc>
+    <lastmod>2022-11-16T12:28:59+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/tool/remoteloginofubuntuserversetting/</loc>
+    <lastmod>2022-11-16T12:28:59+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/ssh/</loc>
+    <lastmod>2022-11-16T12:28:59+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/</loc>
+    <lastmod>2022-11-16T12:28:59+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/ubuntu/</loc>
+    <lastmod>2022-11-16T12:28:59+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/tool/deployservicewithdockercompose/</loc>
+    <lastmod>2022-11-16T12:16:06+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/docker-compose/</loc>
+    <lastmod>2022-11-16T12:16:06+08:00</lastmod>
+  </url><url>
     <loc>https://puffinjiang.github.io/posts/tool/indexlimitofmongodb/</loc>
     <lastmod>2022-11-13T18:56:59+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/mongodb/</loc>
-    <lastmod>2022-11-13T18:56:59+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/</loc>
-    <lastmod>2022-11-13T18:56:59+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/</loc>
     <lastmod>2022-11-13T18:56:59+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/utools/</loc>
