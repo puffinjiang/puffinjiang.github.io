@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Limit Of MongoDB Index | Puffin Jiang&#39;s Blog</title>
-<meta name="keywords" content="标签1">
+<meta name="keywords" content="MongoDB">
 <meta name="description" content="使用MongoDB时，索引相关的限制和优化">
 <meta name="author" content="
 作者：Puffin Jiang">
@@ -103,7 +103,7 @@
   "name": "Limit Of MongoDB Index",
   "description": "使用MongoDB时，索引相关的限制和优化",
   "keywords": [
-    "标签1"
+    "MongoDB"
   ],
   "articleBody": "额外开销 每个索引占据一定的存储空间，在进行插入，更新和删除操作时也需要对索引进行操作。所以，如果你很少对集合进行读取操作，建议不使用索引。\n内存(RAM)使用 由于索引是存储在内存(RAM)中,你应该确保该索引的大小不超过内存的限制。\n如果索引的大小大于内存的限制，MongoDB会删除一些索引，这将导致性能下降。\n查询限制 索引不能被以下的查询使用：\n正则表达式及非操作符，如 $nin, $not, 等。 算术运算符，如 $mod, 等。 $where 子句 所以，检测你的语句是否使用索引是一个好的习惯，可以用explain来查看。\n索引键限制 从2.6版本开始，如果现有的索引字段的值超过索引键的限制，MongoDB中不会创建索引。\n插入文档超过索引键限制 如果文档的索引字段值超过了索引键的限制，MongoDB不会将任何文档转换成索引的集合。与mongorestore和mongoimport工具类似。\n最大范围 集合中索引不能超过64个 索引名的长度不能超过128个字符 一个复合索引最多可以有31个字段 ",
   "wordCount" : "418",
@@ -350,7 +350,7 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://puffinjiang.github.io/tags/%E6%A0%87%E7%AD%BE1/">标签1</a></li>
+      <li><a href="https://puffinjiang.github.io/tags/mongodb/">MongoDB</a></li>
     </ul>
 <nav class="paginav">
   <a class="next" href="https://puffinjiang.github.io/posts/tool/utoolscannotgetnewenvfromsystem/">
