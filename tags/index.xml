@@ -6,22 +6,49 @@
     <description>Recent content in Tags on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Nov 2022 12:28:59 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Nov 2022 17:01:18 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu</title>
+      <link>https://puffinjiang.github.io/tags/ubuntu/</link>
+      <pubDate>Sun, 27 Nov 2022 17:01:18 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VBoxManage</title>
+      <link>https://puffinjiang.github.io/tags/vboxmanage/</link>
+      <pubDate>Sun, 27 Nov 2022 17:01:18 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/vboxmanage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virtualbox Headless</title>
+      <link>https://puffinjiang.github.io/tags/virtualbox-headless/</link>
+      <pubDate>Sun, 27 Nov 2022 17:01:18 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/virtualbox-headless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>虚拟机</title>
+      <link>https://puffinjiang.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+      <pubDate>Sun, 27 Nov 2022 17:01:18 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>SSH</title>
       <link>https://puffinjiang.github.io/tags/ssh/</link>
       <pubDate>Wed, 16 Nov 2022 12:28:59 +0800</pubDate>
       
       <guid>https://puffinjiang.github.io/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://puffinjiang.github.io/tags/ubuntu/</link>
-      <pubDate>Wed, 16 Nov 2022 12:28:59 +0800</pubDate>
-      
-      <guid>https://puffinjiang.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     
