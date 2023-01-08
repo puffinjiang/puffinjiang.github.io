@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Aug 2022 12:41:11 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/posts/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Download Attachment Filename Invalid</title>
+      <link>https://puffinjiang.github.io/posts/tech/downloadattachmentfilenameinvalid/</link>
+      <pubDate>Wed, 04 Jan 2023 18:40:31 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/tech/downloadattachmentfilenameinvalid/</guid>
+      <description>解决文件下载中附件设置filename不生效问题</description>
+    </item>
+    
+    <item>
       <title>Mounting A Hard Drive In Ubuntu</title>
       <link>https://puffinjiang.github.io/posts/tech/mountingaharddriveinubuntu/</link>
       <pubDate>Fri, 30 Dec 2022 20:02:53 +0800</pubDate>

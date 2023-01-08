@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://puffinjiang.github.io/tags/content-disposition/</loc>
+    <lastmod>2023-01-04T18:40:31+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/tech/downloadattachmentfilenameinvalid/</loc>
+    <lastmod>2023-01-04T18:40:31+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/java/</loc>
+    <lastmod>2023-01-04T18:40:31+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/</loc>
+    <lastmod>2023-01-04T18:40:31+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/</loc>
+    <lastmod>2023-01-04T18:40:31+08:00</lastmod>
+  </url><url>
     <loc>https://puffinjiang.github.io/tags/linux/</loc>
     <lastmod>2022-12-30T20:02:53+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/posts/tech/mountingaharddriveinubuntu/</loc>
-    <lastmod>2022-12-30T20:02:53+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/</loc>
-    <lastmod>2022-12-30T20:02:53+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/</loc>
     <lastmod>2022-12-30T20:02:53+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/ubuntu/</loc>
@@ -127,6 +136,8 @@
   </url><url>
     <loc>https://puffinjiang.github.io/about/</loc>
     <lastmod>2022-08-24T10:20:53+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/application/octet-stream/</loc>
   </url><url>
     <loc>https://puffinjiang.github.io/series/</loc>
   </url>
