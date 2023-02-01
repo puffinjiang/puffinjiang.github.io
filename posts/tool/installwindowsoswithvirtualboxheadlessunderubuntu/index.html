@@ -105,8 +105,8 @@
   "keywords": [
     "Virtualbox Headless", "Ubuntu", "虚拟机", "VBoxManage"
   ],
-  "articleBody": "安装virtualbox ❗注意，一定要设置拓展包特性，后续才能使用windows远程桌面连接。Ubuntu默认是VNC的连接方式，通过设置拓展包特性，修改为vrdp的连接方式\n安装virtualbox软件 1 apt-get install virtualbox 安装拓展包 1 apt install virtualbox-ext-pack 检查拓展包是否安装成功：\n1 VBoxManage list extpacks 设置拓展包特性，为后续的远程桌面连接做准备\n1 VBoxManage setproperty vrdeextpack \"Oracle VM VirtualBox Extension Pack\" 创建虚拟机，并安装操作系统 创建一个虚拟机，名称为：guest_os_1，操作系统为windows10\n创建虚拟机使用的虚拟硬盘，文件路径为 /prod/vmos/guest_os_1/guest_os_1.vdi，大小为100G，即102400m\n1 VBoxManage createmedium --filename /prod/vmos/guest_os_1/guest_os_1.vdi --size 102400 创建虚拟机，名称为：guest_os_1，操作系统为：Windows10_64\n1 VBoxManage createvm --name \"guest_os_1\" --ostype Windows10_64 --register 如果需要安装其他类型的操作系统，可以通过如下命令查看：\n1 VBoxManage list ostypes 创建stat磁盘控制器，并和步骤一中的虚拟硬盘绑定\n1 VBoxManage storagectl guest_os_1 --name \"SATA Controller\" --add sata --controller IntelAHCI 绑定步骤一中的虚拟硬盘\n1 VBoxManage storageattach guest_os_1 --storagectl \"SATA Controller\" --port 0 --device 0 --type hdd --medium /prod/vmos/guest_os_1/guest_os_1.vdi 创建IDE控制器，设置为DVD，并和下载好的Windows10 ISO文件绑定\n1 VBoxManage storagectl guest_os_1 --name \"IDE Controller\" --add ide 绑定windows iso镜像文件，镜像文件路径为：/prod/iso/zh-cn_windows_10_business_editions_version_22h2_updated_nov_2022_x64_dvd_e310fb02.iso\n1 VBoxManage storageattach guest_os_1 --storagectl \"IDE Controller\" --port 1 --device 0 --type dvddrive --medium \"/prod/iso/zh-cn_windows_10_business_editions_version_22h2_updated_nov_2022_x64_dvd_e310fb02.iso\" 给虚拟机分配cpu和内存，以分配4个cpu和4g内存为例：\n1 VBoxManage modifyvm guest_os_1 --cpus 4 --memory 4096 设置虚拟机的启动顺序，首先是硬盘，其次是dvd\n1 VBoxManage modifyvm guest_os_1 --boot1 disk --boot2 dvd 打开VRDE远程连接功能，默认端口为3389\n1 VBoxManage modifyvm guest_os_1 --vrde on 也可设置为自定义端口，以设置为2233为例：\n1 VBoxManage modifyvm guest_os_1 --vrdeport 2233 # 默认端口为3389 开启虚拟机\n1 VBoxManage startvm guest_os_1 --type=headless 查看虚拟机\n1 2 3 4 5 # 查看所有的虚拟机 VBoxManage list vms # 查看运行中的虚拟机 VBoxManage list runningvms 通过windows远程桌面连接虚拟机，并开始安装windows系统。以宿主机Ubuntu的ip是 192.168.0.66 为例，远程桌面连接的ip和端口应设置为 192.168.0.66:2233 ，此处的端口与步骤7 中设置的 vrdeport 保持一致。\n挂载和安装 VBoxGuestAdditions.iso 镜像\n挂载镜像：\n1 VBoxManage storageattach guest_os_1 --storagectl \"IDE Controller\" --port 1 --device 0 --type dvddrive --medium \"/usr/share/virtualbox/VBoxGuestAdditions.iso\" 开启虚拟机，进入驱动器文件下，点击对应的安装文件\nwindows文件为``\n1 D:\\VBoxWindowsAdditions.exe 删除虚拟机 关闭虚拟机\n1 VBoxManage controlvm guest_os_1 poweroff 删除虚拟机，命令如下、此命令会删除对应虚拟机的文件及配置信息。\n1 VBoxManage unregistervm --delete guest_os_1 ",
-  "wordCount" : "995",
+  "articleBody": "安装virtualbox ❗注意，一定要设置拓展包特性，后续才能使用windows远程桌面连接。Ubuntu默认是VNC的连接方式，通过设置拓展包特性，修改为vrdp的连接方式\n安装virtualbox软件 1 apt-get install virtualbox 安装拓展包 1 apt install virtualbox-ext-pack 检查拓展包是否安装成功：\n1 VBoxManage list extpacks 设置拓展包特性，为后续的远程桌面连接做准备\n1 VBoxManage setproperty vrdeextpack \"Oracle VM VirtualBox Extension Pack\" 创建虚拟机，并安装操作系统 创建一个虚拟机，名称为：guest_os_1，操作系统为windows10\n创建虚拟机使用的虚拟硬盘，文件路径为 /prod/vmos/guest_os_1/guest_os_1.vdi，大小为100G，即102400m\n1 VBoxManage createmedium --filename /prod/vmos/guest_os_1/guest_os_1.vdi --size 102400 创建虚拟机，名称为：guest_os_1，操作系统为：Windows10_64\n1 VBoxManage createvm --name \"guest_os_1\" --ostype Windows10_64 --register 如果需要安装其他类型的操作系统，可以通过如下命令查看：\n1 VBoxManage list ostypes 创建stat磁盘控制器，并和步骤一中的虚拟硬盘绑定\n1 VBoxManage storagectl guest_os_1 --name \"SATA Controller\" --add sata --controller IntelAHCI 绑定步骤一中的虚拟硬盘\n1 VBoxManage storageattach guest_os_1 --storagectl \"SATA Controller\" --port 0 --device 0 --type hdd --medium /prod/vmos/guest_os_1/guest_os_1.vdi 创建IDE控制器，设置为DVD，并和下载好的Windows10 ISO文件绑定\n1 VBoxManage storagectl guest_os_1 --name \"IDE Controller\" --add ide 绑定windows iso镜像文件，镜像文件路径为：/prod/iso/zh-cn_windows_10_business_editions_version_22h2_updated_nov_2022_x64_dvd_e310fb02.iso\n1 VBoxManage storageattach guest_os_1 --storagectl \"IDE Controller\" --port 1 --device 0 --type dvddrive --medium \"/prod/iso/zh-cn_windows_10_business_editions_version_22h2_updated_nov_2022_x64_dvd_e310fb02.iso\" 给虚拟机分配cpu和内存，以分配4个cpu和4g内存为例：\n1 VBoxManage modifyvm guest_os_1 --cpus 4 --memory 4096 设置虚拟机的启动顺序，首先是硬盘，其次是dvd\n1 VBoxManage modifyvm guest_os_1 --boot1 disk --boot2 dvd 打开和关闭VRDE远程连接功能，默认端口为3389\n开启VRDE远程连接：\n1 VBoxManage modifyvm guest_os_1 --vrde on 关闭VRDE远程连接：\n1 VBoxManage modifyvm guest_os_1 --vrde off 设置为自定义端口，以设置为2233为例：\n1 VBoxManage modifyvm guest_os_1 --vrdeport 2233 # 默认端口为3389 开启虚拟机\n1 VBoxManage startvm guest_os_1 --type=headless 查看虚拟机\n1 2 3 4 5 # 查看所有的虚拟机 VBoxManage list vms # 查看运行中的虚拟机 VBoxManage list runningvms 通过windows远程桌面连接虚拟机，并开始安装windows系统。以宿主机Ubuntu的ip是 192.168.0.66 为例，远程桌面连接的ip和端口应设置为 192.168.0.66:2233 ，此处的端口与步骤7 中设置的 vrdeport 保持一致。\n挂载和安装 VBoxGuestAdditions.iso 镜像\n挂载镜像：\n1 VBoxManage storageattach guest_os_1 --storagectl \"IDE Controller\" --port 1 --device 0 --type dvddrive --medium \"/usr/share/virtualbox/VBoxGuestAdditions.iso\" 开启虚拟机，进入驱动器文件下，点击对应的安装文件\nwindows安装文件路径：\n1 D:\\VBoxWindowsAdditions.exe 挂载和删除宿主机的文件夹到虚拟机\n❗注意，此挂载命令在6.1版本才生效\n挂载宿主机文件夹 ‘/prod/data’ 为虚拟机Windows系统的 ‘Y:/’，相关参数作用如下：\n–name 挂载的文件夹名称 –hostpath 指定宿主机文件夹 –readonly 设置虚拟机系统只能读数据，不允许写 1 VBoxManage sharedfolder add guest_os_1 --name 'data' --hostpath '/prod/data' --readonly --automount --auto-mount-point 'Y:/' 删除挂载\n1 VBoxManage sharedfolder remove guest_os_1 --name 'data' 删除虚拟机 关闭虚拟机\n1 VBoxManage controlvm guest_os_1 poweroff 删除虚拟机，命令如下、此命令会删除对应虚拟机的文件及配置信息。\n1 VBoxManage unregistervm --delete guest_os_1 ",
+  "wordCount" : "1170",
   "inLanguage": "en",
   "datePublished": "2022-11-27T17:01:18+08:00",
   "dateModified": "2022-11-27T17:01:18+08:00",
@@ -232,7 +232,7 @@
 
 
 
-创建:&nbsp;<span title='2022-11-27 17:01:18 +0800 +0800'>2022-11-27</span>&nbsp;|&nbsp;更新:&nbsp;2022-11-27&nbsp;|&nbsp;字数:&nbsp;995字&nbsp;|&nbsp;时长: 2分钟&nbsp;|&nbsp;
+创建:&nbsp;<span title='2022-11-27 17:01:18 +0800 +0800'>2022-11-27</span>&nbsp;|&nbsp;更新:&nbsp;2022-11-27&nbsp;|&nbsp;字数:&nbsp;1170字&nbsp;|&nbsp;时长: 3分钟&nbsp;|&nbsp;
 作者：Puffin Jiang
 
 </div>
@@ -460,7 +460,8 @@
 </div>
 </div></li>
 <li>
-<p>打开VRDE远程连接功能，默认端口为3389</p>
+<p>打开和关闭VRDE远程连接功能，默认端口为3389</p>
+<p>开启VRDE远程连接：</p>
 <div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
@@ -469,7 +470,16 @@
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>VBoxManage modifyvm guest_os_1 --vrde on
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>也可设置为自定义端口，以设置为2233为例：</p>
+</div><p>关闭VRDE远程连接：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>VBoxManage modifyvm guest_os_1 --vrde off
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>设置为自定义端口，以设置为2233为例：</p>
 <div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
@@ -524,13 +534,42 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>开启虚拟机，进入驱动器文件下，点击对应的安装文件</p>
-<p>windows文件为``</p>
+<p>windows安装文件路径：</p>
 <div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>D:<span style="color:#0ff;font-weight:bold">\V</span>BoxWindowsAdditions.exe
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>挂载和删除宿主机的文件夹到虚拟机</p>
+<blockquote>
+<p>❗注意，此挂载命令在6.1版本才生效</p>
+</blockquote>
+<p>挂载宿主机文件夹 &lsquo;/prod/data&rsquo; 为虚拟机Windows系统的 &lsquo;Y:/&rsquo;，相关参数作用如下：</p>
+<ul>
+<li>&ndash;name 挂载的文件夹名称</li>
+<li>&ndash;hostpath 指定宿主机文件夹</li>
+<li>&ndash;readonly 设置虚拟机系统只能读数据，不允许写</li>
+</ul>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>VBoxManage sharedfolder add guest_os_1 --name <span style="color:#0ff;font-weight:bold">&#39;data&#39;</span>  --hostpath <span style="color:#0ff;font-weight:bold">&#39;/prod/data&#39;</span>  --readonly --automount --auto-mount-point <span style="color:#0ff;font-weight:bold">&#39;Y:/&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>删除挂载</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>VBoxManage sharedfolder remove guest_os_1 --name <span style="color:#0ff;font-weight:bold">&#39;data&#39;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
