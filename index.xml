@@ -6,7 +6,16 @@
     <description>Recent content on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Jan 2023 18:40:31 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Apr 2023 22:00:22 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>InstallingFreebsdOnLaptop</title>
+      <link>https://puffinjiang.github.io/posts/tool/installingfreebsdonlaptop/</link>
+      <pubDate>Tue, 11 Apr 2023 22:00:22 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/tool/installingfreebsdonlaptop/</guid>
+      <description>记录一下使用旧笔记本电脑安装FreeBSD的过程，以及其中遇到的一些坑</description>
+    </item>
+    
     <item>
       <title>Download Attachment Filename Invalid</title>
       <link>https://puffinjiang.github.io/posts/tech/downloadattachmentfilenameinvalid/</link>

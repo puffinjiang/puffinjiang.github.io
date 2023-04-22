@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Aug 2022 12:41:35 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/posts/tool/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>InstallingFreebsdOnLaptop</title>
+      <link>https://puffinjiang.github.io/posts/tool/installingfreebsdonlaptop/</link>
+      <pubDate>Tue, 11 Apr 2023 22:00:22 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/tool/installingfreebsdonlaptop/</guid>
+      <description>记录一下使用旧笔记本电脑安装FreeBSD的过程，以及其中遇到的一些坑</description>
+    </item>
+    
+    <item>
       <title>Maven父子工程，子项目相互依赖，打包时找不到依赖</title>
       <link>https://puffinjiang.github.io/posts/tool/mavenfailtoexecutegoalonproject/</link>
       <pubDate>Sun, 04 Dec 2022 14:07:17 +0800</pubDate>
