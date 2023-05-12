@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>InstallingFreebsdOnLaptop | Puffin Jiang&#39;s Blog</title>
+<title>在笔记本电脑上安装 FreeBSD | Puffin Jiang&#39;s Blog</title>
 <meta name="keywords" content="FreeBSD, Laptop">
 <meta name="description" content="记录一下使用旧笔记本电脑安装FreeBSD的过程，以及其中遇到的一些坑">
 <meta name="author" content="
@@ -57,7 +57,7 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="InstallingFreebsdOnLaptop" />
+</noscript><meta property="og:title" content="在笔记本电脑上安装 FreeBSD" />
 <meta property="og:description" content="记录一下使用旧笔记本电脑安装FreeBSD的过程，以及其中遇到的一些坑" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://puffinjiang.github.io/posts/tool/installingfreebsdonlaptop/" /><meta property="article:section" content="posts" />
@@ -65,7 +65,7 @@
 <meta property="article:modified_time" content="2023-04-11T22:00:22+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="InstallingFreebsdOnLaptop"/>
+<meta name="twitter:title" content="在笔记本电脑上安装 FreeBSD"/>
 <meta name="twitter:description" content="记录一下使用旧笔记本电脑安装FreeBSD的过程，以及其中遇到的一些坑"/>
 
 
@@ -89,7 +89,7 @@
     {
       "@type": "ListItem",
       "position":  4 ,
-      "name": "InstallingFreebsdOnLaptop",
+      "name": "在笔记本电脑上安装 FreeBSD",
       "item": "https://puffinjiang.github.io/posts/tool/installingfreebsdonlaptop/"
     }
   ]
@@ -99,13 +99,13 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "InstallingFreebsdOnLaptop",
-  "name": "InstallingFreebsdOnLaptop",
+  "headline": "在笔记本电脑上安装 FreeBSD",
+  "name": "在笔记本电脑上安装 FreeBSD",
   "description": "记录一下使用旧笔记本电脑安装FreeBSD的过程，以及其中遇到的一些坑",
   "keywords": [
     "FreeBSD", "Laptop"
   ],
-  "articleBody": "最近把限制的旧笔记本电脑折腾出来了，刚好又看到了关于FreeBSD相关的文章，就想着安装一个玩玩，也把旧电脑当作简单的服务器用起来，记录一下我的踩坑历程。\n前期的一些准备以及说明 由于我只想安装FreeBSD单系统，准备使用SSD硬盘作为系统盘，使用HDD硬盘做存储。\n设备的一些硬件相关的参数 电脑型号： GE60 2PE-449 CPU型号： Intel 酷睿i5 4210H GPU型号： NVIDIA GeForce GTX 860M＋Intel GMA HD 4600 内存容量： 16GB（DDR3 1600MHz 8GB x 2） 硬盘容量： 256GB ssd + 1TB hdd（7200转）\nUSB启动盘的制作 镜像下载（注意：不同的版本选择的镜像不同），在FreeBSD官方下载站选择对应的版本下载，由于我是安装在物理机上面的，故选择后缀为 memstick.img 版本的镜像，具体可看相关文档\n在Windows10系统上使用 rufus 制作USB启动盘\n笔记本Bios U盘启动设置 开机出现MSI的logo时，按DELETE键进入Bios设置 设置Boot Option #1 选项为 USB Hard Disk, 配置路径： Boot -\u003e Boot Option #1 设置Boot mode select 选项为 UEFI and CSM, 配置路径： Boot -\u003e Boot mode select FreeBSD的安装 安装过程中遇到的问题以及解决方案 使用 startx 启动失败 https://forums.freebsd.org/threads/xauthority-why.52903/\n硬盘挂载 系统重启后发现其中一块硬盘没有挂载，使用挂载 mount -w /dev/ada0 /opt/data 报错如下：\n1 mount: /dev/ada0: R/W mount of /opt/data denied. Filesystem is not clean - run fsck.: Operation not permitted 修复命令：\n1 fsck -y /dev/ada0 重新挂载：\n1 mount -w /dev/ada0 /opt/data 设置为系统启动挂载，在 /etc/fstab 文件中添加如下内容，参考文档\n1 /dev/ada0 /opt/data ufs rw 2 2 ",
+  "articleBody": "最近把限制的旧笔记本电脑折腾出来了，刚好又看到了关于FreeBSD相关的文章，就想着安装一个玩玩，也把旧电脑当作简单的服务器用起来，记录一下我的踩坑历程。\n前期的一些准备以及说明 由于我只想安装FreeBSD单系统，准备使用SSD硬盘作为系统盘，使用HDD硬盘做存储。\n设备的一些硬件相关的参数 电脑型号： GE60 2PE-449\nCPU型号： Intel 酷睿i5 4210H\nGPU型号： NVIDIA GeForce GTX 860M＋Intel GMA HD 4600\n内存容量： 16GB（DDR3 1600MHz 8GB x 2）\n硬盘容量： 256GB ssd + 1TB hdd（7200转）\nUSB启动盘的制作 镜像下载（注意：不同的版本选择的镜像不同），在FreeBSD官方下载站选择对应的版本下载，由于我是安装在物理机上面的，故选择后缀为 memstick.img 版本的镜像，具体可看相关文档\n在Windows10系统上使用 rufus 制作USB启动盘\n笔记本Bios U盘启动设置 开机出现MSI的logo时，按DELETE键进入Bios设置 设置Boot Option #1 选项为 USB Hard Disk, 配置路径： Boot -\u003e Boot Option #1 设置Boot mode select 选项为 UEFI and CSM, 配置路径： Boot -\u003e Boot mode select FreeBSD的安装 安装过程中遇到的问题以及解决方案 使用 startx 启动失败 https://forums.freebsd.org/threads/xauthority-why.52903/\n硬盘挂载 系统重启后发现其中一块硬盘没有挂载，使用挂载 mount -w /dev/ada0 /opt/data 报错如下：\n1 mount: /dev/ada0: R/W mount of /opt/data denied. Filesystem is not clean - run fsck.: Operation not permitted 修复命令：\n1 fsck -y /dev/ada0 重新挂载：\n1 mount -w /dev/ada0 /opt/data 设置为系统启动挂载，在 /etc/fstab 文件中添加如下内容，参考文档\n1 /dev/ada0 /opt/data ufs rw 2 2 ",
   "wordCount" : "566",
   "inLanguage": "en",
   "datePublished": "2023-04-11T22:00:22+08:00",
@@ -216,7 +216,7 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://puffinjiang.github.io">Home</a>&nbsp;»&nbsp;<a href="https://puffinjiang.github.io/posts/">📚文章</a>&nbsp;»&nbsp;<a href="https://puffinjiang.github.io/posts/tool/">🛠️工具</a></div>
     <h1 class="post-title">
-      InstallingFreebsdOnLaptop
+      在笔记本电脑上安装 FreeBSD
     </h1>
     <div class="post-meta">
 
@@ -329,10 +329,10 @@
 <h2 id="前期的一些准备以及说明">前期的一些准备以及说明<a hidden class="anchor" aria-hidden="true" href="#前期的一些准备以及说明">#</a></h2>
 <p>由于我只想安装FreeBSD单系统，准备使用SSD硬盘作为系统盘，使用HDD硬盘做存储。</p>
 <h3 id="设备的一些硬件相关的参数">设备的一些硬件相关的参数<a hidden class="anchor" aria-hidden="true" href="#设备的一些硬件相关的参数">#</a></h3>
-<p>电脑型号： GE60 2PE-449
-CPU型号： Intel 酷睿i5 4210H
-GPU型号： NVIDIA GeForce GTX 860M＋Intel GMA HD 4600
-内存容量： 16GB（DDR3 1600MHz 8GB x 2）
+<p>电脑型号： GE60 2PE-449<br>
+CPU型号： Intel 酷睿i5 4210H<br>
+GPU型号： NVIDIA GeForce GTX 860M＋Intel GMA HD 4600<br>
+内存容量： 16GB（DDR3 1600MHz 8GB x 2）<br>
 硬盘容量： 256GB ssd + 1TB hdd（7200转）</p>
 <h3 id="usb启动盘的制作">USB启动盘的制作<a hidden class="anchor" aria-hidden="true" href="#usb启动盘的制作">#</a></h3>
 <ol>
@@ -401,6 +401,11 @@ GPU型号： NVIDIA GeForce GTX 860M＋Intel GMA HD 4600
       <li><a href="https://puffinjiang.github.io/tags/laptop/">Laptop</a></li>
     </ul>
 <nav class="paginav">
+  <a class="prev" href="https://puffinjiang.github.io/posts/tool/usepodmanonwindows/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Use Podman On Windows</span>
+  </a>
   <a class="next" href="https://puffinjiang.github.io/posts/tech/downloadattachmentfilenameinvalid/">
     <span class="title">Next »</span>
     <br>
