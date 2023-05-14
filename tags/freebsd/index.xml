@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 11 Apr 2023 22:00:22 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/freebsd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在笔记本电脑上安装 FreeBSD</title>
-      <link>https://puffinjiang.github.io/posts/tool/installingfreebsdonlaptop/</link>
+      <link>https://puffinjiang.github.io/posts/summary/installingfreebsdonlaptop/</link>
       <pubDate>Tue, 11 Apr 2023 22:00:22 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/installingfreebsdonlaptop/</guid>
+      <guid>https://puffinjiang.github.io/posts/summary/installingfreebsdonlaptop/</guid>
       <description>记录一下使用旧笔记本电脑安装FreeBSD的过程，以及其中遇到的一些坑</description>
     </item>
     

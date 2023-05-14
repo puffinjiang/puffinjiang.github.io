@@ -9,136 +9,136 @@
     <lastBuildDate>Sun, 07 May 2023 20:32:56 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Github Broswer Can Not Add Pull Requests</title>
-      <link>https://puffinjiang.github.io/posts/tool/githubbroswercannotaddpullrequests/</link>
+      <link>https://puffinjiang.github.io/posts/solution/githubbroswercannotaddpullrequests/</link>
       <pubDate>Sun, 07 May 2023 20:32:56 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/githubbroswercannotaddpullrequests/</guid>
+      <guid>https://puffinjiang.github.io/posts/solution/githubbroswercannotaddpullrequests/</guid>
       <description>解决方案 1 2 3 4 git checkout upstreambranch git branch master upstreambranch -f git checkout master git push origin master -f 参考了 stackoverflow 上的答案</description>
     </item>
     
     <item>
       <title>Use Podman On Windows</title>
-      <link>https://puffinjiang.github.io/posts/tool/usepodmanonwindows/</link>
+      <link>https://puffinjiang.github.io/posts/learning/usepodmanonwindows/</link>
       <pubDate>Fri, 28 Apr 2023 09:03:30 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/usepodmanonwindows/</guid>
+      <guid>https://puffinjiang.github.io/posts/learning/usepodmanonwindows/</guid>
       <description>在 Windows10 下使用 podman 代替 docker</description>
     </item>
     
     <item>
       <title>在笔记本电脑上安装 FreeBSD</title>
-      <link>https://puffinjiang.github.io/posts/tool/installingfreebsdonlaptop/</link>
+      <link>https://puffinjiang.github.io/posts/summary/installingfreebsdonlaptop/</link>
       <pubDate>Tue, 11 Apr 2023 22:00:22 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/installingfreebsdonlaptop/</guid>
+      <guid>https://puffinjiang.github.io/posts/summary/installingfreebsdonlaptop/</guid>
       <description>记录一下使用旧笔记本电脑安装FreeBSD的过程，以及其中遇到的一些坑</description>
     </item>
     
     <item>
       <title>Download Attachment Filename Invalid</title>
-      <link>https://puffinjiang.github.io/posts/tech/downloadattachmentfilenameinvalid/</link>
+      <link>https://puffinjiang.github.io/posts/summary/downloadattachmentfilenameinvalid/</link>
       <pubDate>Wed, 04 Jan 2023 18:40:31 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tech/downloadattachmentfilenameinvalid/</guid>
+      <guid>https://puffinjiang.github.io/posts/summary/downloadattachmentfilenameinvalid/</guid>
       <description>解决文件下载中附件设置filename不生效问题</description>
     </item>
     
     <item>
       <title>Mounting A Hard Drive In Ubuntu</title>
-      <link>https://puffinjiang.github.io/posts/tech/mountingaharddriveinubuntu/</link>
+      <link>https://puffinjiang.github.io/posts/learning/mountingaharddriveinubuntu/</link>
       <pubDate>Fri, 30 Dec 2022 20:02:53 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tech/mountingaharddriveinubuntu/</guid>
+      <guid>https://puffinjiang.github.io/posts/learning/mountingaharddriveinubuntu/</guid>
       <description>在Ubuntu下挂载新硬盘</description>
     </item>
     
     <item>
       <title>Maven父子工程，子项目相互依赖，打包时找不到依赖</title>
-      <link>https://puffinjiang.github.io/posts/tool/mavenfailtoexecutegoalonproject/</link>
+      <link>https://puffinjiang.github.io/posts/solution/mavenfailtoexecutegoalonproject/</link>
       <pubDate>Sun, 04 Dec 2022 14:07:17 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/mavenfailtoexecutegoalonproject/</guid>
+      <guid>https://puffinjiang.github.io/posts/solution/mavenfailtoexecutegoalonproject/</guid>
       <description>在父子工程项目中、有依赖关系的子项目打包时找不到依赖</description>
     </item>
     
     <item>
       <title>Ubuntu 下使用 Virtualbox Headless 安装 Windows 系统</title>
-      <link>https://puffinjiang.github.io/posts/tool/installwindowsoswithvirtualboxheadlessunderubuntu/</link>
+      <link>https://puffinjiang.github.io/posts/learning/installwindowsoswithvirtualboxheadlessunderubuntu/</link>
       <pubDate>Sun, 27 Nov 2022 17:01:18 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/installwindowsoswithvirtualboxheadlessunderubuntu/</guid>
+      <guid>https://puffinjiang.github.io/posts/learning/installwindowsoswithvirtualboxheadlessunderubuntu/</guid>
       <description>Ubuntu下使用无Gui的Virtualbox虚拟机安装Windows操作系统</description>
     </item>
     
     <item>
       <title>Mysql Common Commands</title>
-      <link>https://puffinjiang.github.io/posts/tool/mysqlcommoncommands/</link>
+      <link>https://puffinjiang.github.io/posts/learning/mysqlcommoncommands/</link>
       <pubDate>Thu, 17 Nov 2022 12:30:35 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/mysqlcommoncommands/</guid>
+      <guid>https://puffinjiang.github.io/posts/learning/mysqlcommoncommands/</guid>
       <description>记录一些常用的Mysql数据库命令</description>
     </item>
     
     <item>
       <title>Remote Login Of Ubuntu Server Setting</title>
-      <link>https://puffinjiang.github.io/posts/tool/remoteloginofubuntuserversetting/</link>
+      <link>https://puffinjiang.github.io/posts/learning/remoteloginofubuntuserversetting/</link>
       <pubDate>Wed, 16 Nov 2022 12:28:59 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/remoteloginofubuntuserversetting/</guid>
+      <guid>https://puffinjiang.github.io/posts/learning/remoteloginofubuntuserversetting/</guid>
       <description>Ubuntu 开启ssh远程连接服务</description>
     </item>
     
     <item>
       <title>Deploy Service With Docker Compose</title>
-      <link>https://puffinjiang.github.io/posts/tool/deployservicewithdockercompose/</link>
+      <link>https://puffinjiang.github.io/posts/learning/deployservicewithdockercompose/</link>
       <pubDate>Wed, 16 Nov 2022 12:16:06 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/deployservicewithdockercompose/</guid>
+      <guid>https://puffinjiang.github.io/posts/learning/deployservicewithdockercompose/</guid>
       <description>使用docker-compose部署常用的服务</description>
     </item>
     
     <item>
       <title>Limit Of MongoDB Index</title>
-      <link>https://puffinjiang.github.io/posts/tool/indexlimitofmongodb/</link>
+      <link>https://puffinjiang.github.io/posts/learning/indexlimitofmongodb/</link>
       <pubDate>Sun, 13 Nov 2022 18:56:59 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/indexlimitofmongodb/</guid>
+      <guid>https://puffinjiang.github.io/posts/learning/indexlimitofmongodb/</guid>
       <description>使用MongoDB时，索引相关的限制和优化</description>
     </item>
     
     <item>
       <title>Utools Can not Get New Env From System</title>
-      <link>https://puffinjiang.github.io/posts/tool/utoolscannotgetnewenvfromsystem/</link>
+      <link>https://puffinjiang.github.io/posts/solution/utoolscannotgetnewenvfromsystem/</link>
       <pubDate>Wed, 09 Nov 2022 16:50:57 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/utoolscannotgetnewenvfromsystem/</guid>
+      <guid>https://puffinjiang.github.io/posts/solution/utoolscannotgetnewenvfromsystem/</guid>
       <description>utools无法及时更新最新的系统环境变量，导致在使用powershell等命令行工具时无法读取相应的环境变量</description>
     </item>
     
     <item>
       <title>Upgrade brew error after updating MacOS</title>
-      <link>https://puffinjiang.github.io/posts/tool/upgradebrewerrorafterupdatingmacos/</link>
+      <link>https://puffinjiang.github.io/posts/solution/upgradebrewerrorafterupdatingmacos/</link>
       <pubDate>Thu, 27 Oct 2022 22:48:48 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/upgradebrewerrorafterupdatingmacos/</guid>
+      <guid>https://puffinjiang.github.io/posts/solution/upgradebrewerrorafterupdatingmacos/</guid>
       <description>Git can not used after I updated the MacOS</description>
     </item>
     
     <item>
       <title>Flask源码阅读</title>
-      <link>https://puffinjiang.github.io/posts/tech/flask%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/</link>
+      <link>https://puffinjiang.github.io/posts/learning/flask%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/</link>
       <pubDate>Thu, 01 Sep 2022 20:30:18 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tech/flask%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/</guid>
+      <guid>https://puffinjiang.github.io/posts/learning/flask%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/</guid>
       <description>记录一下阅读Flask源码的过程</description>
     </item>
     
     <item>
       <title>Celery内存泄漏解决</title>
-      <link>https://puffinjiang.github.io/posts/tech/celery%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E8%A7%A3%E5%86%B3/</link>
+      <link>https://puffinjiang.github.io/posts/summary/celery%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E8%A7%A3%E5%86%B3/</link>
       <pubDate>Wed, 31 Aug 2022 18:34:15 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tech/celery%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E8%A7%A3%E5%86%B3/</guid>
+      <guid>https://puffinjiang.github.io/posts/summary/celery%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E8%A7%A3%E5%86%B3/</guid>
       <description>记一次Celery内存泄漏的问题解决</description>
     </item>
     
@@ -153,10 +153,10 @@
     
     <item>
       <title>PostgreSQL数据库常用操作</title>
-      <link>https://puffinjiang.github.io/posts/tool/postgresql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</link>
+      <link>https://puffinjiang.github.io/posts/learning/postgresql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</link>
       <pubDate>Wed, 24 Aug 2022 18:25:18 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/postgresql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</guid>
+      <guid>https://puffinjiang.github.io/posts/learning/postgresql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</guid>
       <description>记录一些常用的PostgreSQL数据库操作命令</description>
     </item>
     
@@ -164,10 +164,10 @@
     
     <item>
       <title>Git推送代码失败</title>
-      <link>https://puffinjiang.github.io/posts/tool/git%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81%E5%A4%B1%E8%B4%A5/</link>
+      <link>https://puffinjiang.github.io/posts/solution/git%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81%E5%A4%B1%E8%B4%A5/</link>
       <pubDate>Wed, 24 Aug 2022 12:59:06 +0800</pubDate>
       
-      <guid>https://puffinjiang.github.io/posts/tool/git%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81%E5%A4%B1%E8%B4%A5/</guid>
+      <guid>https://puffinjiang.github.io/posts/solution/git%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81%E5%A4%B1%E8%B4%A5/</guid>
       <description>在使用 git push时报 remote: error: GH007: Your push would publish a private email address.</description>
     </item>
     
