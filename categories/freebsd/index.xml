@@ -5,8 +5,17 @@
     <link>https://puffinjiang.github.io/categories/freebsd/</link>
     <description>Recent content in FreeBSD on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 11 Apr 2023 22:00:22 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/freebsd/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sat, 17 Jun 2023 22:49:07 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/freebsd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use Nginx On FreeBSD</title>
+      <link>https://puffinjiang.github.io/posts/learning/usenginxonfreebsd/</link>
+      <pubDate>Sat, 17 Jun 2023 22:49:07 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/learning/usenginxonfreebsd/</guid>
+      <description>在FreeBSD上使用Nginx</description>
+    </item>
+    
     <item>
       <title>在笔记本电脑上安装 FreeBSD</title>
       <link>https://puffinjiang.github.io/posts/summary/installingfreebsdonlaptop/</link>

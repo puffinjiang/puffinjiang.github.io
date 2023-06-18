@@ -5,7 +5,7 @@
     <link>https://puffinjiang.github.io/tags/maven/</link>
     <description>Recent content in Maven on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Sun, 04 Dec 2022 14:07:17 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Maven父子工程，子项目相互依赖，打包时找不到依赖</title>
