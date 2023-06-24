@@ -3,24 +3,72 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://puffinjiang.github.io/categories/</loc>
-    <lastmod>2023-06-17T22:49:07+08:00</lastmod>
+    <lastmod>2023-06-24T18:28:30+08:00</lastmod>
   </url><url>
-    <loc>https://puffinjiang.github.io/tags/frebsd/</loc>
-    <lastmod>2023-06-17T22:49:07+08:00</lastmod>
+    <loc>https://puffinjiang.github.io/tags/freebsd/</loc>
+    <lastmod>2023-06-24T18:28:30+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/categories/freebsd/</loc>
+    <lastmod>2023-06-24T18:28:30+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/learning/telegrafandinfluxdbandgrafanamonitoronfreebsd/</loc>
+    <lastmod>2023-06-24T18:28:30+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/grafana/</loc>
+    <lastmod>2023-06-24T18:28:30+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/grafana/</loc>
+    <lastmod>2023-06-24T18:28:30+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/influxdb/</loc>
+    <lastmod>2023-06-24T18:28:30+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/influxdb/</loc>
+    <lastmod>2023-06-24T18:28:30+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/</loc>
+    <lastmod>2023-06-24T18:28:30+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/</loc>
+    <lastmod>2023-06-24T18:28:30+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/telegraf/</loc>
+    <lastmod>2023-06-24T18:28:30+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/telegraf/</loc>
+    <lastmod>2023-06-24T18:28:30+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/docker/</loc>
+    <lastmod>2023-06-18T22:00:13+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/docker/</loc>
+    <lastmod>2023-06-18T22:00:13+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/monitor/</loc>
+    <lastmod>2023-06-18T22:00:13+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/monitor/</loc>
+    <lastmod>2023-06-18T22:00:13+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/learning/telegrafandinfluxdbmonitor/</loc>
+    <lastmod>2023-06-18T22:00:13+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/learning/modifythesourceofdockeronubuntu/</loc>
+    <lastmod>2023-06-18T17:04:21+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/ubuntu/</loc>
+    <lastmod>2023-06-18T17:04:21+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/ubuntu/</loc>
+    <lastmod>2023-06-18T17:04:21+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/frebsd/</loc>
     <lastmod>2023-06-17T22:49:07+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/nginx/</loc>
     <lastmod>2023-06-17T22:49:07+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/categories/nginx/</loc>
-    <lastmod>2023-06-17T22:49:07+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/</loc>
-    <lastmod>2023-06-17T22:49:07+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/</loc>
     <lastmod>2023-06-17T22:49:07+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/posts/learning/usenginxonfreebsd/</loc>
@@ -77,9 +125,6 @@
     <loc>https://puffinjiang.github.io/categories/%E5%AE%B9%E5%99%A8/</loc>
     <lastmod>2023-04-28T09:03:30+08:00</lastmod>
   </url><url>
-    <loc>https://puffinjiang.github.io/tags/freebsd/</loc>
-    <lastmod>2023-04-11T22:00:22+08:00</lastmod>
-  </url><url>
     <loc>https://puffinjiang.github.io/tags/laptop/</loc>
     <lastmod>2023-04-11T22:00:22+08:00</lastmod>
   </url><url>
@@ -108,9 +153,6 @@
     <lastmod>2023-01-04T18:40:31+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/posts/learning/mountingaharddriveinubuntu/</loc>
-    <lastmod>2022-12-30T20:02:53+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/ubuntu/</loc>
     <lastmod>2022-12-30T20:02:53+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/maven/</loc>

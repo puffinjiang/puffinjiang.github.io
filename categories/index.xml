@@ -6,13 +6,67 @@
     <description>Recent content in Categories on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 17 Jun 2023 22:49:07 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Jun 2023 18:28:30 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FreeBSD</title>
       <link>https://puffinjiang.github.io/categories/freebsd/</link>
-      <pubDate>Sat, 17 Jun 2023 22:49:07 +0800</pubDate>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
       
       <guid>https://puffinjiang.github.io/categories/freebsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grafana</title>
+      <link>https://puffinjiang.github.io/categories/grafana/</link>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/categories/grafana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>InfluxDB</title>
+      <link>https://puffinjiang.github.io/categories/influxdb/</link>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/categories/influxdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Telegraf</title>
+      <link>https://puffinjiang.github.io/categories/telegraf/</link>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/categories/telegraf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://puffinjiang.github.io/categories/docker/</link>
+      <pubDate>Sun, 18 Jun 2023 22:00:13 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monitor</title>
+      <link>https://puffinjiang.github.io/categories/monitor/</link>
+      <pubDate>Sun, 18 Jun 2023 22:00:13 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/categories/monitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://puffinjiang.github.io/categories/ubuntu/</link>
+      <pubDate>Sun, 18 Jun 2023 17:04:21 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/categories/ubuntu/</guid>
       <description></description>
     </item>
     

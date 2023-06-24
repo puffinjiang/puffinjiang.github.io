@@ -6,7 +6,70 @@
     <description>Recent content in Tags on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 17 Jun 2023 22:49:07 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Jun 2023 18:28:30 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FreeBSD</title>
+      <link>https://puffinjiang.github.io/tags/freebsd/</link>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/freebsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grafana</title>
+      <link>https://puffinjiang.github.io/tags/grafana/</link>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/grafana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>InfluxDB</title>
+      <link>https://puffinjiang.github.io/tags/influxdb/</link>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/influxdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Telegraf</title>
+      <link>https://puffinjiang.github.io/tags/telegraf/</link>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/telegraf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://puffinjiang.github.io/tags/docker/</link>
+      <pubDate>Sun, 18 Jun 2023 22:00:13 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monitor</title>
+      <link>https://puffinjiang.github.io/tags/monitor/</link>
+      <pubDate>Sun, 18 Jun 2023 22:00:13 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/monitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://puffinjiang.github.io/tags/ubuntu/</link>
+      <pubDate>Sun, 18 Jun 2023 17:04:21 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>FreBSD</title>
       <link>https://puffinjiang.github.io/tags/frebsd/</link>
@@ -89,15 +152,6 @@
     </item>
     
     <item>
-      <title>FreeBSD</title>
-      <link>https://puffinjiang.github.io/tags/freebsd/</link>
-      <pubDate>Tue, 11 Apr 2023 22:00:22 +0800</pubDate>
-      
-      <guid>https://puffinjiang.github.io/tags/freebsd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Laptop</title>
       <link>https://puffinjiang.github.io/tags/laptop/</link>
       <pubDate>Tue, 11 Apr 2023 22:00:22 +0800</pubDate>
@@ -130,15 +184,6 @@
       <pubDate>Wed, 04 Jan 2023 18:40:31 +0800</pubDate>
       
       <guid>https://puffinjiang.github.io/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://puffinjiang.github.io/tags/ubuntu/</link>
-      <pubDate>Fri, 30 Dec 2022 20:02:53 +0800</pubDate>
-      
-      <guid>https://puffinjiang.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     

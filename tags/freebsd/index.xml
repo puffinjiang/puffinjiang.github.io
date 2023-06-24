@@ -6,7 +6,16 @@
     <description>Recent content in FreeBSD on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Apr 2023 22:00:22 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/freebsd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Jun 2023 18:28:30 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/freebsd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FreeBSD上的 Telegraf、InfluxDB 和 Grafana 监控 </title>
+      <link>https://puffinjiang.github.io/posts/learning/telegrafandinfluxdbandgrafanamonitoronfreebsd/</link>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/learning/telegrafandinfluxdbandgrafanamonitoronfreebsd/</guid>
+      <description>在FreeBSD上使用Telegraf和InfluxDB以及Grafana监控系统运行情况</description>
+    </item>
+    
     <item>
       <title>在笔记本电脑上安装 FreeBSD</title>
       <link>https://puffinjiang.github.io/posts/summary/installingfreebsdonlaptop/</link>
