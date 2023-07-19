@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PDF compress on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/en/tags/pdf-compress/</link>
+    <description>Recent content in PDF compress on Puffin Jiang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Jul 2023 19:29:17 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/en/tags/pdf-compress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PDF 压缩</title>
+      <link>https://puffinjiang.github.io/en/posts/solution/pdfcompress/</link>
+      <pubDate>Thu, 13 Jul 2023 19:29:17 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/posts/solution/pdfcompress/</guid>
+      <description>压缩PDF文件大小</description>
+    </item>
+    
+  </channel>
+</rss>

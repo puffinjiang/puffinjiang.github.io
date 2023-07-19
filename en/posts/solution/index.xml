@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>🛠️解决方案 on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/en/posts/solution/</link>
+    <description>Recent content in 🛠️解决方案 on Puffin Jiang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 24 Aug 2022 12:41:35 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/en/posts/solution/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PDF 压缩</title>
+      <link>https://puffinjiang.github.io/en/posts/solution/pdfcompress/</link>
+      <pubDate>Thu, 13 Jul 2023 19:29:17 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/posts/solution/pdfcompress/</guid>
+      <description>压缩PDF文件大小</description>
+    </item>
+    
+    <item>
+      <title>Gitlab使用过程中遇到的问题记录</title>
+      <link>https://puffinjiang.github.io/en/posts/solution/gitlabcierror/</link>
+      <pubDate>Fri, 16 Jun 2023 19:34:44 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/posts/solution/gitlabcierror/</guid>
+      <description>Gitlab使用过程中遇到的问题记录</description>
+    </item>
+    
+    <item>
+      <title>Github Broswer Can Not Add Pull Requests</title>
+      <link>https://puffinjiang.github.io/en/posts/solution/githubbroswercannotaddpullrequests/</link>
+      <pubDate>Sun, 07 May 2023 20:32:56 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/posts/solution/githubbroswercannotaddpullrequests/</guid>
+      <description>解决方案 1 2 3 4 git checkout upstreambranch git branch master upstreambranch -f git checkout master git push origin master -f 参考了 stackoverflow 上的答案</description>
+    </item>
+    
+    <item>
+      <title>Maven父子工程，子项目相互依赖，打包时找不到依赖</title>
+      <link>https://puffinjiang.github.io/en/posts/solution/mavenfailtoexecutegoalonproject/</link>
+      <pubDate>Sun, 04 Dec 2022 14:07:17 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/posts/solution/mavenfailtoexecutegoalonproject/</guid>
+      <description>在父子工程项目中、有依赖关系的子项目打包时找不到依赖</description>
+    </item>
+    
+    <item>
+      <title>Utools Can not Get New Env From System</title>
+      <link>https://puffinjiang.github.io/en/posts/solution/utoolscannotgetnewenvfromsystem/</link>
+      <pubDate>Wed, 09 Nov 2022 16:50:57 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/posts/solution/utoolscannotgetnewenvfromsystem/</guid>
+      <description>utools无法及时更新最新的系统环境变量，导致在使用powershell等命令行工具时无法读取相应的环境变量</description>
+    </item>
+    
+    <item>
+      <title>Upgrade brew error after updating MacOS</title>
+      <link>https://puffinjiang.github.io/en/posts/solution/upgradebrewerrorafterupdatingmacos/</link>
+      <pubDate>Thu, 27 Oct 2022 22:48:48 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/posts/solution/upgradebrewerrorafterupdatingmacos/</guid>
+      <description>Git can not used after I updated the MacOS</description>
+    </item>
+    
+    <item>
+      <title>Git推送代码失败</title>
+      <link>https://puffinjiang.github.io/en/posts/solution/git%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81%E5%A4%B1%E8%B4%A5/</link>
+      <pubDate>Wed, 24 Aug 2022 12:59:06 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/posts/solution/git%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81%E5%A4%B1%E8%B4%A5/</guid>
+      <description>在使用 git push时报 remote: error: GH007: Your push would publish a private email address.</description>
+    </item>
+    
+  </channel>
+</rss>

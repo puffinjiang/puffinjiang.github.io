@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Telegraf on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/en/categories/telegraf/</link>
+    <description>Recent content in Telegraf on Puffin Jiang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 24 Jun 2023 18:28:30 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/en/categories/telegraf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FreeBSD上的 Telegraf、InfluxDB 和 Grafana 监控 </title>
+      <link>https://puffinjiang.github.io/en/posts/learning/telegrafandinfluxdbandgrafanamonitoronfreebsd/</link>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/posts/learning/telegrafandinfluxdbandgrafanamonitoronfreebsd/</guid>
+      <description>在FreeBSD上使用Telegraf和InfluxDB以及Grafana监控系统运行情况</description>
+    </item>
+    
+    <item>
+      <title>Telegraf And Influxdb Monitor</title>
+      <link>https://puffinjiang.github.io/en/posts/learning/telegrafandinfluxdbmonitor/</link>
+      <pubDate>Sun, 18 Jun 2023 22:00:13 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/posts/learning/telegrafandinfluxdbmonitor/</guid>
+      <description>使用Telegraf Influxdb 和 Grafana 进行服务监控</description>
+    </item>
+    
+  </channel>
+</rss>

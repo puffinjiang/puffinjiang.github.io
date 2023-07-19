@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Utools on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/en/tags/utools/</link>
+    <description>Recent content in Utools on Puffin Jiang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 09 Nov 2022 16:50:57 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/en/tags/utools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Utools Can not Get New Env From System</title>
+      <link>https://puffinjiang.github.io/en/posts/solution/utoolscannotgetnewenvfromsystem/</link>
+      <pubDate>Wed, 09 Nov 2022 16:50:57 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/posts/solution/utoolscannotgetnewenvfromsystem/</guid>
+      <description>utools无法及时更新最新的系统环境变量，导致在使用powershell等命令行工具时无法读取相应的环境变量</description>
+    </item>
+    
+  </channel>
+</rss>

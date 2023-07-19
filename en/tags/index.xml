@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/en/tags/</link>
+    <description>Recent content in Tags on Puffin Jiang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 18 Jul 2023 17:30:59 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apache Bench</title>
+      <link>https://puffinjiang.github.io/en/tags/apache-bench/</link>
+      <pubDate>Tue, 18 Jul 2023 17:30:59 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/apache-bench/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FreeBSD</title>
+      <link>https://puffinjiang.github.io/en/tags/freebsd/</link>
+      <pubDate>Tue, 18 Jul 2023 17:30:59 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/freebsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ghostscript</title>
+      <link>https://puffinjiang.github.io/en/tags/ghostscript/</link>
+      <pubDate>Thu, 13 Jul 2023 19:29:17 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/ghostscript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PDF compress</title>
+      <link>https://puffinjiang.github.io/en/tags/pdf-compress/</link>
+      <pubDate>Thu, 13 Jul 2023 19:29:17 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/pdf-compress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Grafana</title>
+      <link>https://puffinjiang.github.io/en/tags/grafana/</link>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/grafana/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>InfluxDB</title>
+      <link>https://puffinjiang.github.io/en/tags/influxdb/</link>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/influxdb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Telegraf</title>
+      <link>https://puffinjiang.github.io/en/tags/telegraf/</link>
+      <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/telegraf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://puffinjiang.github.io/en/tags/docker/</link>
+      <pubDate>Sun, 18 Jun 2023 22:00:13 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monitor</title>
+      <link>https://puffinjiang.github.io/en/tags/monitor/</link>
+      <pubDate>Sun, 18 Jun 2023 22:00:13 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/monitor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://puffinjiang.github.io/en/tags/ubuntu/</link>
+      <pubDate>Sun, 18 Jun 2023 17:04:21 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FreBSD</title>
+      <link>https://puffinjiang.github.io/en/tags/frebsd/</link>
+      <pubDate>Sat, 17 Jun 2023 22:49:07 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/frebsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>https://puffinjiang.github.io/en/tags/nginx/</link>
+      <pubDate>Sat, 17 Jun 2023 22:49:07 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>https://puffinjiang.github.io/en/tags/gitlab/</link>
+      <pubDate>Fri, 16 Jun 2023 19:34:44 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://puffinjiang.github.io/en/tags/windows/</link>
+      <pubDate>Fri, 26 May 2023 10:04:43 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>远程连接</title>
+      <link>https://puffinjiang.github.io/en/tags/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/</link>
+      <pubDate>Fri, 26 May 2023 10:04:43 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://puffinjiang.github.io/en/tags/git/</link>
+      <pubDate>Sun, 07 May 2023 20:32:56 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>https://puffinjiang.github.io/en/tags/github/</link>
+      <pubDate>Sun, 07 May 2023 20:32:56 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pull Requests</title>
+      <link>https://puffinjiang.github.io/en/tags/pull-requests/</link>
+      <pubDate>Sun, 07 May 2023 20:32:56 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/pull-requests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Podman</title>
+      <link>https://puffinjiang.github.io/en/tags/podman/</link>
+      <pubDate>Fri, 28 Apr 2023 09:03:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/podman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>容器</title>
+      <link>https://puffinjiang.github.io/en/tags/%E5%AE%B9%E5%99%A8/</link>
+      <pubDate>Fri, 28 Apr 2023 09:03:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/%E5%AE%B9%E5%99%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Laptop</title>
+      <link>https://puffinjiang.github.io/en/tags/laptop/</link>
+      <pubDate>Tue, 11 Apr 2023 22:00:22 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/laptop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://puffinjiang.github.io/en/tags/linux/</link>
+      <pubDate>Mon, 27 Mar 2023 10:45:04 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Content-Disposition</title>
+      <link>https://puffinjiang.github.io/en/tags/content-disposition/</link>
+      <pubDate>Wed, 04 Jan 2023 18:40:31 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/content-disposition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>https://puffinjiang.github.io/en/tags/java/</link>
+      <pubDate>Wed, 04 Jan 2023 18:40:31 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>https://puffinjiang.github.io/en/tags/maven/</link>
+      <pubDate>Sun, 04 Dec 2022 14:07:17 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/maven/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VBoxManage</title>
+      <link>https://puffinjiang.github.io/en/tags/vboxmanage/</link>
+      <pubDate>Sun, 27 Nov 2022 17:01:18 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/vboxmanage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virtualbox Headless</title>
+      <link>https://puffinjiang.github.io/en/tags/virtualbox-headless/</link>
+      <pubDate>Sun, 27 Nov 2022 17:01:18 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/virtualbox-headless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>虚拟机</title>
+      <link>https://puffinjiang.github.io/en/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+      <pubDate>Sun, 27 Nov 2022 17:01:18 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>https://puffinjiang.github.io/en/tags/mysql/</link>
+      <pubDate>Thu, 17 Nov 2022 12:30:35 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>https://puffinjiang.github.io/en/tags/ssh/</link>
+      <pubDate>Wed, 16 Nov 2022 12:28:59 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker-compose</title>
+      <link>https://puffinjiang.github.io/en/tags/docker-compose/</link>
+      <pubDate>Wed, 16 Nov 2022 12:16:06 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/docker-compose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MongoDB</title>
+      <link>https://puffinjiang.github.io/en/tags/mongodb/</link>
+      <pubDate>Sun, 13 Nov 2022 18:56:59 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Utools</title>
+      <link>https://puffinjiang.github.io/en/tags/utools/</link>
+      <pubDate>Wed, 09 Nov 2022 16:50:57 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/utools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MacOS</title>
+      <link>https://puffinjiang.github.io/en/tags/macos/</link>
+      <pubDate>Thu, 27 Oct 2022 22:48:48 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flask</title>
+      <link>https://puffinjiang.github.io/en/tags/flask/</link>
+      <pubDate>Thu, 01 Sep 2022 20:30:18 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/flask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Celery</title>
+      <link>https://puffinjiang.github.io/en/tags/celery/</link>
+      <pubDate>Wed, 31 Aug 2022 18:34:15 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/celery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://puffinjiang.github.io/en/tags/postgresql/</link>
+      <pubDate>Wed, 24 Aug 2022 18:25:18 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>application/octet-stream</title>
+      <link>https://puffinjiang.github.io/en/tags/application/octet-stream/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/application/octet-stream/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CI/CD</title>
+      <link>https://puffinjiang.github.io/en/tags/ci/cd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://puffinjiang.github.io/en/tags/ci/cd/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
