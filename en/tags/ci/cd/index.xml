@@ -5,7 +5,8 @@
     <link>https://puffinjiang.github.io/en/tags/ci/cd/</link>
     <description>Recent content in CI/CD on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://puffinjiang.github.io/en/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>Puffin Jiang</copyright><atom:link href="https://puffinjiang.github.io/en/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gitlab使用过程中遇到的问题记录</title>
       <link>https://puffinjiang.github.io/en/posts/solution/gitlabcierror/</link>

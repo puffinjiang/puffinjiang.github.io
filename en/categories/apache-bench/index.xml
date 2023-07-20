@@ -6,6 +6,7 @@
     <description>Recent content in Apache Bench on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <copyright>Puffin Jiang</copyright>
     <lastBuildDate>Tue, 18 Jul 2023 17:30:59 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/en/categories/apache-bench/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 FreeBSD 上使用Apache Bench 进行性能压力测试</title>

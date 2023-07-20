@@ -6,6 +6,7 @@
     <description>Recent content in 虚拟机 on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <copyright>Puffin Jiang</copyright>
     <lastBuildDate>Sun, 27 Nov 2022 17:01:18 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/en/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu 下使用 Virtualbox Headless 安装 Windows 系统</title>
