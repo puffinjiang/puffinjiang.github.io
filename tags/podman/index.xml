@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Podman on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/tags/podman/</link>
+    <description>Recent content in Podman on Puffin Jiang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Puffin Jiang</copyright>
+    <lastBuildDate>Fri, 28 Apr 2023 09:03:30 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/podman/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use Podman On Windows</title>
+      <link>https://puffinjiang.github.io/posts/learning/usepodmanonwindows/</link>
+      <pubDate>Fri, 28 Apr 2023 09:03:30 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/learning/usepodmanonwindows/</guid>
+      <description>在 Windows10 下使用 podman 代替 docker</description>
+    </item>
+    
+  </channel>
+</rss>

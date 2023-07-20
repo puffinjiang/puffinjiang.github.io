@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Maven on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/tags/maven/</link>
+    <description>Recent content in Maven on Puffin Jiang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Puffin Jiang</copyright>
+    <lastBuildDate>Sun, 04 Dec 2022 14:07:17 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maven父子工程，子项目相互依赖，打包时找不到依赖</title>
+      <link>https://puffinjiang.github.io/posts/solution/mavenfailtoexecutegoalonproject/</link>
+      <pubDate>Sun, 04 Dec 2022 14:07:17 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/mavenfailtoexecutegoalonproject/</guid>
+      <description>在父子工程项目中、有依赖关系的子项目打包时找不到依赖</description>
+    </item>
+    
+  </channel>
+</rss>
