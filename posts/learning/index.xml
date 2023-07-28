@@ -27,15 +27,6 @@
     </item>
     
     <item>
-      <title>Telegraf And Influxdb Monitor</title>
-      <link>https://puffinjiang.github.io/posts/learning/telegrafandinfluxdbmonitor/</link>
-      <pubDate>Sun, 18 Jun 2023 22:00:13 +0800</pubDate>
-      
-      <guid>https://puffinjiang.github.io/posts/learning/telegrafandinfluxdbmonitor/</guid>
-      <description>使用Telegraf Influxdb 和 Grafana 进行服务监控</description>
-    </item>
-    
-    <item>
       <title>Modify The Source Of Docker On Ubuntu</title>
       <link>https://puffinjiang.github.io/posts/learning/modifythesourceofdockeronubuntu/</link>
       <pubDate>Sun, 18 Jun 2023 17:04:21 +0800</pubDate>
