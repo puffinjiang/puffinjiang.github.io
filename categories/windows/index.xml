@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Puffin Jiang</copyright>
-    <lastBuildDate>Fri, 26 May 2023 10:04:43 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jul 2023 20:02:50 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Signing Commits Of Git On Windows</title>
+      <link>https://puffinjiang.github.io/posts/solution/signingcommitsofgitonwindows/</link>
+      <pubDate>Fri, 28 Jul 2023 20:02:50 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/signingcommitsofgitonwindows/</guid>
+      <description>在 Windows 上使用 GPG 对 Git 提交进行签名</description>
+    </item>
+    
     <item>
       <title>Windows 使用小技巧</title>
       <link>https://puffinjiang.github.io/posts/learning/windowsusagetips/</link>

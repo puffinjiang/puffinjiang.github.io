@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Signing Git Commits on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/tags/signing-git-commits/</link>
+    <description>Recent content in Signing Git Commits on Puffin Jiang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Puffin Jiang</copyright>
+    <lastBuildDate>Fri, 28 Jul 2023 20:02:50 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/signing-git-commits/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Signing Commits Of Git On Windows</title>
+      <link>https://puffinjiang.github.io/posts/solution/signingcommitsofgitonwindows/</link>
+      <pubDate>Fri, 28 Jul 2023 20:02:50 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/signingcommitsofgitonwindows/</guid>
+      <description>在 Windows 上使用 GPG 对 Git 提交进行签名</description>
+    </item>
+    
+  </channel>
+</rss>

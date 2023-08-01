@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>MongoDB4.4 副本集服务部署 | Puffin Jiang&#39;s Blog</title>
-<meta name="keywords" content="MongoDB4.4, Replica Set">
-<meta name="description" content="部署一个 3 节点的 MongoDB4.4 版本副本集服务">
+<title>Signing Commits Of Git On Windows | Puffin Jiang&#39;s Blog</title>
+<meta name="keywords" content="Signing Git Commits, Windows">
+<meta name="description" content="在 Windows 上使用 GPG 对 Git 提交进行签名">
 <meta name="author" content="
 作者：Puffin Jiang">
-<link rel="canonical" href="https://puffinjiang.github.io/posts/solution/mongodbreplicasetservicesdeployment/">
+<link rel="canonical" href="https://puffinjiang.github.io/posts/solution/signingcommitsofgitonwindows/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.34bf4cb683cae568b9d188811604e39e36b24e661d45a315724d1459ee1160b4.css" integrity="sha256-NL9MtoPK5Wi50YiBFgTjnjayTmYdRaMVck0UWe4RYLQ=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -57,16 +57,16 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="MongoDB4.4 副本集服务部署" />
-<meta property="og:description" content="部署一个 3 节点的 MongoDB4.4 版本副本集服务" />
+</noscript><meta property="og:title" content="Signing Commits Of Git On Windows" />
+<meta property="og:description" content="在 Windows 上使用 GPG 对 Git 提交进行签名" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://puffinjiang.github.io/posts/solution/mongodbreplicasetservicesdeployment/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-07-28T19:23:12+08:00" />
-<meta property="article:modified_time" content="2023-07-28T19:23:12+08:00" />
+<meta property="og:url" content="https://puffinjiang.github.io/posts/solution/signingcommitsofgitonwindows/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-07-28T20:02:50+08:00" />
+<meta property="article:modified_time" content="2023-07-28T20:02:50+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MongoDB4.4 副本集服务部署"/>
-<meta name="twitter:description" content="部署一个 3 节点的 MongoDB4.4 版本副本集服务"/>
+<meta name="twitter:title" content="Signing Commits Of Git On Windows"/>
+<meta name="twitter:description" content="在 Windows 上使用 GPG 对 Git 提交进行签名"/>
 
 
 <script type="application/ld+json">
@@ -89,8 +89,8 @@
     {
       "@type": "ListItem",
       "position":  4 ,
-      "name": "MongoDB4.4 副本集服务部署",
-      "item": "https://puffinjiang.github.io/posts/solution/mongodbreplicasetservicesdeployment/"
+      "name": "Signing Commits Of Git On Windows",
+      "item": "https://puffinjiang.github.io/posts/solution/signingcommitsofgitonwindows/"
     }
   ]
 }
@@ -99,24 +99,24 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "MongoDB4.4 副本集服务部署",
-  "name": "MongoDB4.4 副本集服务部署",
-  "description": "部署一个 3 节点的 MongoDB4.4 版本副本集服务",
+  "headline": "Signing Commits Of Git On Windows",
+  "name": "Signing Commits Of Git On Windows",
+  "description": "在 Windows 上使用 GPG 对 Git 提交进行签名",
   "keywords": [
-    "MongoDB4.4", "Replica Set"
+    "Signing Git Commits", "Windows"
   ],
-  "articleBody": "前置依赖 添加MongoDB GPG Key\n1 2 3 curl -fsSL https://pgp.mongodb.com/server-4.4.asc | \\ sudo gpg -o /usr/share/keyrings/mongodb-server-4.4.gpg \\ --dearmor 添加mongodb列表，我们使用的系统是Ubuntu 20.04 (Focal)\n1 echo \"deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-4.4.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse\" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list 更新系统软件包\n1 sudo apt-get update MongoDB Server 安装 安装服务\n1 sudo apt-get install -y mongodb-org 配置 ⚠️ 在配置的过程中尽量使用 DNS 主机名的方式而不是IP地址，防止 IP 改变导致需要更改配置\n我们这里的副本集是一个 3 节点的副本架构，3 个节点的内网 IP 分别为 192.168.1.6 、 192.168.1.7、192.168.1.8 ，对应的 hostname 分别为 mongo1、mongo2、mongo3\n新增主机 IP 地址映射 分别在三台主机下的 /etc/hosts 添加映射\n打开 /etc/hosts 文件\n1 sudo vim /etc/hosts 在文件中添加如下内容\n1 2 3 192.168.1.6 mongo1 192.168.1.7 mongo2 192.168.1.8 mongo3 在三台机器上分别使用 ping 命令测试添加的映射是否生效\n1 2 3 ping mongo1 ping mongo2 ping mongo3 配置 mongod.conf 配置文件 MongoDB 的配置文件路径为 /etc/mongod.conf，这里我们主要配置3个参数。\n配置 bindIp 来控制那些人可以访问 mongodb 服务，在 /etc/mongod.conf 添加如下内容\n1 2 3 net: port: 27017 # 修改了 port 内容，不使用默认端口加强安全性 bindIp: 0.0.0.0 # 配置允许远程连接访问 配置 replSetName 参数，注意三个服务的配置文件里，这个值是一摸一样的！\n1 2 replication: replSetName: rs0 配置 keyFile 参数让副本成员质检通过 keyFile 进行身份校验\n生成 keyfile 文件到 /data/mongo/mongodb.key\n1 openssl rand -base64 756 \u003e /data/mongo/mongodb.key 在 /etc/mongod.conf 中配置 keyFile\n1 2 security: keyFile: /data/mongo/mongodb.key 到此，配置完成。\n启动 我们这里使用的是 systemd(systemctl) 方式，service 方式可参考官方文档。分别在三个节点中执行如下命令启动 mongo\n1 sudo service mongod start 初始化集群 使用 mongo 连接到服务\n1 mongo 127.0.0.1:27017 初始化集群\n1 2 3 4 5 6 7 8 rs.initiate( { _id : \"rs0\", members: [ { _id: 0, host: \"mongo1:27017\" }, { _id: 1, host: \"mongo2:27017\" }, { _id: 2, host: \"mongo3:27017\" } ] }) 集群连接用户创建，这里我们创建用户名为 root 的用户\n1 2 use admin # 切换到 admin 用户 db.createUser({user:'root', pwd:'xxxx', roles: ['root']}) # 创建用户名为 root， 密码为 xxxx， 角色为 root 的用户 测试连接 ⚠️ 阿里云等云服务主机需要修改安全组策略开通 27017 服务端口\n使用如下命令进行连通性测试：\n1 mongo mongodb://root:xxxx@mongo1:27017,mongo2:27017,mongo3:27017 ",
-  "wordCount" : "727",
+  "articleBody": "配置 GPG 安装 我这里使用 scoop 来管理常用的软件。\n1 scoop install gpg 查看安装的版本\n1 gpg --version 结果如下：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 gpg (GnuPG) 2.4.3 libgcrypt 1.10.2 Copyright (C) 2023 g10 Code GmbH License GNU GPL-3.0-or-later This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. Home: D:\\Development\\Scoop\\apps\\gpg\\current\\home Supported algorithms: Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH, CAMELLIA128, CAMELLIA192, CAMELLIA256 Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224 Compression: Uncompressed, ZIP, ZLIB, BZIP2 生成新的 GPG 密钥 输入如下命令：\n1 gpg --full-generate-key 上面的命令执行之后，会要求选用对应的加密算法。我们在这里直接回车选择默认的 9 使用 ECC 椭圆曲线加密算法用于加密和解密。提示内容如下:\n1 2 3 4 5 6 7 8 9 10 11 12 13 gpg (GnuPG) 2.4.3; Copyright (C) 2023 g10 Code GmbH This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. Please select what kind of key you want: (1) RSA and RSA (2) DSA and Elgamal (3) DSA (sign only) (4) RSA (sign only) (9) ECC (sign and encrypt) *default* (10) ECC (sign only) (14) Existing key from card Your selection? 选择完成之后，会提示选用对应的椭圆曲线。我们选择默认的 Curve 25519 椭圆曲线。提示内容如下：\n1 2 3 4 Please select which elliptic curve you want: (1) Curve 25519 *default* (4) NIST P-384 (6) Brainpool P-256 设置过期时间，根据需要设置，我这里选的是 0，设置不过期。\n1 2 3 4 5 6 7 Please specify how long the key should be valid. 0 = key does not expire = key expires in n days w = key expires in n weeks m = key expires in n months y = key expires in n years Key is valid for? (0) 过期时间选择之后，会提示确认上述的操作，直接输入 y 确认。\n设置相关的用户标识。上一步确认之后，会提示输入用户名，邮箱和注释这三个内容，按自己的情况输入即可。输入并确认后 GPG 密钥则生成。\n1 2 3 4 5 6 7 GnuPG needs to construct a user ID to identify your key. Real name: name Email address: name@example.com Comment: You selected this USER-ID: \"name \" 查看已经生成的密钥 1 gpg --list-secret-keys --keyid-format=long 显示如下(相关内容已经过处理)：\n1 2 3 4 sec ed25519/5D4C3FXXXXXX2034EF xxxx-xx-xx [SC] D27B94066FFDEDXXXXXXXD4885D4C3F97ASD034EF uid [ultimate] name ssb cv25519/901FXXXAXX204X8C xxxx-xx-xx [E] 导出公钥 这里公钥的导出以上面的 5D4C3FXXXXXX2034EF 为例，命令如下：\n1 gpg --armor --export 5D4C3FXXXXXX2034EF 显示的公钥格式如下（中间的具体内容以 ··· 代替）：\n1 2 3 4 -----BEGIN PGP PUBLIC KEY BLOCK----- ... -----END PGP PUBLIC KEY BLOCK----- 配置 Git 提交时签名 Github 配置密钥 我们先导出当前要使用的公钥\n点击 Github 右上角的头像，点击 Settings 选项。\n在左侧的页面单击 SSH and GPG keys 选项。\n在 GPG keys 旁边，点击 New GPG key 按钮。\n在新页中的 Title 输入自己的备注信息，在 Key 中填入第一步中导出的公钥。\n点击 Add key 按钮，公钥添加成功。\n本地配置 配置本地 Git 签名使用的密钥 ID，我们这里使用的密钥 ID 为：5D4C3FXXXXXX2034EF (与配置在 Github 里面的保持一致)。\n1 2 # 这里添加 --global 表示设置为全局 git config --global user.signingkey 5D4C3FXXXXXX2034EF 配置默认对所有提交进行签名，命令如下：\n1 git config --global commit.gpgsign true 可以使用 --unset 取消指定的签名 ID。如下：\n1 git config --global --unset user.signingkey ",
+  "wordCount" : "921",
   "inLanguage": "en",
-  "datePublished": "2023-07-28T19:23:12+08:00",
-  "dateModified": "2023-07-28T19:23:12+08:00",
+  "datePublished": "2023-07-28T20:02:50+08:00",
+  "dateModified": "2023-07-28T20:02:50+08:00",
   "author":[{
     "@type": "Person",
     "name": "Puffin Jiang"
   }],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://puffinjiang.github.io/posts/solution/mongodbreplicasetservicesdeployment/"
+    "@id": "https://puffinjiang.github.io/posts/solution/signingcommitsofgitonwindows/"
   },
   "publisher": {
     "@type": "Organization",
@@ -216,10 +216,10 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://puffinjiang.github.io">Home</a>&nbsp;»&nbsp;<a href="https://puffinjiang.github.io/posts/">📚文章</a>&nbsp;»&nbsp;<a href="https://puffinjiang.github.io/posts/solution/">🛠️解决方案</a></div>
     <h1 class="post-title">
-      MongoDB4.4 副本集服务部署
+      Signing Commits Of Git On Windows
     </h1>
     <div class="post-description">
-      部署一个 3 节点的 MongoDB4.4 版本副本集服务
+      在 Windows 上使用 GPG 对 Git 提交进行签名
     </div>
     <div class="post-meta">
 
@@ -232,7 +232,7 @@
 
 
 
-创建:&nbsp;<span title='2023-07-28 19:23:12 +0800 +0800'>2023-07-28</span>&nbsp;|&nbsp;更新:&nbsp;2023-07-28&nbsp;|&nbsp;字数:&nbsp;727字&nbsp;|&nbsp;时长: 2分钟&nbsp;|&nbsp;
+创建:&nbsp;<span title='2023-07-28 20:02:50 +0800 +0800'>2023-07-28</span>&nbsp;|&nbsp;更新:&nbsp;2023-07-28&nbsp;|&nbsp;字数:&nbsp;921字&nbsp;|&nbsp;时长: 2分钟&nbsp;|&nbsp;
 作者：Puffin Jiang
 
 </div>
@@ -245,28 +245,27 @@
 
             <div class="inner"><ul>
                     <li>
-                        <a href="#%e5%89%8d%e7%bd%ae%e4%be%9d%e8%b5%96" aria-label="前置依赖">前置依赖</a></li>
-                    <li>
-                        <a href="#mongodb-server" aria-label="MongoDB Server">MongoDB Server</a><ul>
+                        <a href="#%e9%85%8d%e7%bd%ae-gpg" aria-label="配置 GPG">配置 GPG</a><ul>
                             
                     <li>
                         <a href="#%e5%ae%89%e8%a3%85" aria-label="安装">安装</a></li>
                     <li>
-                        <a href="#%e9%85%8d%e7%bd%ae" aria-label="配置">配置</a><ul>
+                        <a href="#%e7%94%9f%e6%88%90%e6%96%b0%e7%9a%84-gpg-%e5%af%86%e9%92%a5" aria-label="生成新的 GPG 密钥">生成新的 GPG 密钥</a></li>
+                    <li>
+                        <a href="#%e6%9f%a5%e7%9c%8b%e5%b7%b2%e7%bb%8f%e7%94%9f%e6%88%90%e7%9a%84%e5%af%86%e9%92%a5" aria-label="查看已经生成的密钥">查看已经生成的密钥</a></li>
+                    <li>
+                        <a href="#%e5%af%bc%e5%87%ba%e5%85%ac%e9%92%a5" aria-label="导出公钥">导出公钥</a></li></ul>
+                    </li>
+                    <li>
+                        <a href="#%e9%85%8d%e7%bd%ae-git-%e6%8f%90%e4%ba%a4%e6%97%b6%e7%ad%be%e5%90%8d" aria-label="配置 Git 提交时签名">配置 Git 提交时签名</a><ul>
                             
                     <li>
-                        <a href="#%e6%96%b0%e5%a2%9e%e4%b8%bb%e6%9c%ba-ip-%e5%9c%b0%e5%9d%80%e6%98%a0%e5%b0%84" aria-label="新增主机 IP 地址映射">新增主机 IP 地址映射</a></li>
+                        <a href="#github-%e9%85%8d%e7%bd%ae%e5%af%86%e9%92%a5" aria-label="Github 配置密钥">Github 配置密钥</a></li>
                     <li>
-                        <a href="#%e9%85%8d%e7%bd%ae-mongodconf-%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" aria-label="配置 mongod.conf 配置文件">配置 <code>mongod.conf</code> 配置文件</a></li></ul>
+                        <a href="#%e6%9c%ac%e5%9c%b0%e9%85%8d%e7%bd%ae" aria-label="本地配置">本地配置</a>
                     </li>
-                    <li>
-                        <a href="#%e5%90%af%e5%8a%a8" aria-label="启动">启动</a></li></ul>
-                    </li>
-                    <li>
-                        <a href="#%e5%88%9d%e5%a7%8b%e5%8c%96%e9%9b%86%e7%be%a4" aria-label="初始化集群">初始化集群</a></li>
-                    <li>
-                        <a href="#%e6%b5%8b%e8%af%95%e8%bf%9e%e6%8e%a5" aria-label="测试连接">测试连接</a>
-                    </li>
+                </ul>
+                </li>
                 </ul>
             </div>
         </details>
@@ -331,194 +330,128 @@
         return rect.top + win.pageYOffset;   
     }
 </script>
-  <div class="post-content"><h2 id="前置依赖">前置依赖<a hidden class="anchor" aria-hidden="true" href="#前置依赖">#</a></h2>
-<ol>
-<li>
-<p>添加MongoDB GPG Key</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>curl -fsSL https://pgp.mongodb.com/server-4.4.asc | <span style="color:#0ff;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>sudo gpg -o /usr/share/keyrings/mongodb-server-4.4.gpg <span style="color:#0ff;font-weight:bold">\
-</span></span></span><span style="display:flex;"><span><span style="color:#0ff;font-weight:bold"></span>--dearmor
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>添加mongodb列表，我们使用的系统是<strong>Ubuntu 20.04 (Focal)</strong></p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">echo</span> <span style="color:#0ff;font-weight:bold">&#34;deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-4.4.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse&#34;</span> | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>更新系统软件包</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt-get update
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ol>
-<h2 id="mongodb-server">MongoDB Server<a hidden class="anchor" aria-hidden="true" href="#mongodb-server">#</a></h2>
+  <div class="post-content"><h2 id="配置-gpg">配置 GPG<a hidden class="anchor" aria-hidden="true" href="#配置-gpg">#</a></h2>
 <h3 id="安装">安装<a hidden class="anchor" aria-hidden="true" href="#安装">#</a></h3>
-<p>安装服务</p>
+<p>我这里使用 scoop 来管理常用的软件。</p>
 <div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo apt-get install -y mongodb-org
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>scoop install gpg
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="配置">配置<a hidden class="anchor" aria-hidden="true" href="#配置">#</a></h3>
-<blockquote>
-<p>⚠️ 在配置的过程中尽量使用 DNS 主机名的方式而不是IP地址，防止 IP 改变导致需要更改配置</p>
-</blockquote>
-<p>我们这里的副本集是一个 3 节点的副本架构，3 个节点的内网 IP 分别为 <code>192.168.1.6</code> 、 <code>192.168.1.7</code>、<code>192.168.1.8</code> ，对应的 hostname 分别为 <code>mongo1</code>、<code>mongo2</code>、<code>mongo3</code></p>
-<h4 id="新增主机-ip-地址映射">新增主机 IP 地址映射<a hidden class="anchor" aria-hidden="true" href="#新增主机-ip-地址映射">#</a></h4>
-<p>分别在三台主机下的 <code>/etc/hosts</code> 添加映射</p>
-<ol>
-<li>
-<p>打开 <code>/etc/hosts</code> 文件</p>
+</div><p>查看安装的版本</p>
 <div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo vim /etc/hosts
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>gpg --version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>结果如下：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">13
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>gpg (GnuPG) 2.4.3
+</span></span><span style="display:flex;"><span>libgcrypt 1.10.2
+</span></span><span style="display:flex;"><span>Copyright (C) 2023 g10 Code GmbH
+</span></span><span style="display:flex;"><span>License GNU GPL-3.0-or-later &lt;https://gnu.org/licenses/gpl.html&gt;
+</span></span><span style="display:flex;"><span>This is free software: you are free to change and redistribute it.
+</span></span><span style="display:flex;"><span>There is NO WARRANTY, to the extent permitted by law.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Home: D:\Development\Scoop\apps\gpg\current\home
+</span></span><span style="display:flex;"><span>Supported algorithms:
+</span></span><span style="display:flex;"><span>Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+</span></span><span style="display:flex;"><span>Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+</span></span><span style="display:flex;"><span>        CAMELLIA128, CAMELLIA192, CAMELLIA256
+</span></span><span style="display:flex;"><span>Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+</span></span><span style="display:flex;"><span>Compression: Uncompressed, ZIP, ZLIB, BZIP2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="生成新的-gpg-密钥">生成新的 GPG 密钥<a hidden class="anchor" aria-hidden="true" href="#生成新的-gpg-密钥">#</a></h3>
+<ol>
+<li>
+<p>输入如下命令：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>gpg --full-generate-key
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
-<p>在文件中添加如下内容</p>
+<p>上面的命令执行之后，会要求选用对应的加密算法。我们在这里直接回车选择默认的 9 使用 <a href="https://zh.wikipedia.org/wiki/%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E5%AF%86%E7%A0%81%E5%AD%A6">ECC 椭圆曲线加密算法</a>用于加密和解密。提示内容如下:</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">10
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">11
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">12
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>gpg (GnuPG) 2.4.3; Copyright (C) 2023 g10 Code GmbH
+</span></span><span style="display:flex;"><span>This is free software: you are free to change and redistribute it.
+</span></span><span style="display:flex;"><span>There is NO WARRANTY, to the extent permitted by law.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Please select what kind of key you want:
+</span></span><span style="display:flex;"><span>   (1) RSA and RSA
+</span></span><span style="display:flex;"><span>   (2) DSA and Elgamal
+</span></span><span style="display:flex;"><span>   (3) DSA (sign only)
+</span></span><span style="display:flex;"><span>   (4) RSA (sign only)
+</span></span><span style="display:flex;"><span>   (9) ECC (sign and encrypt) *default*
+</span></span><span style="display:flex;"><span>  (10) ECC (sign only)
+</span></span><span style="display:flex;"><span>  (14) Existing key from card
+</span></span><span style="display:flex;"><span>Your selection?
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>选择完成之后，会提示选用对应的<strong>椭圆曲线</strong>。我们选择默认的 <code>Curve 25519</code> 椭圆曲线。提示内容如下：</p>
 <div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>192.168.1.6 mongo1
-</span></span><span style="display:flex;"><span>192.168.1.7 mongo2
-</span></span><span style="display:flex;"><span>192.168.1.8 mongo3
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Please select which elliptic curve you want:
+</span></span><span style="display:flex;"><span>(1) Curve 25519 *default*
+</span></span><span style="display:flex;"><span>(4) NIST P-384
+</span></span><span style="display:flex;"><span>(6) Brainpool P-256
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
-<p>在三台机器上分别使用 <code>ping</code> 命令测试添加的映射是否生效</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ping mongo1
-</span></span><span style="display:flex;"><span>ping mongo2
-</span></span><span style="display:flex;"><span>ping mongo3
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ol>
-<h4 id="配置-mongodconf-配置文件">配置 <code>mongod.conf</code> 配置文件<a hidden class="anchor" aria-hidden="true" href="#配置-mongodconf-配置文件">#</a></h4>
-<p>MongoDB 的配置文件路径为 <code>/etc/mongod.conf</code>，这里我们主要配置3个参数。</p>
-<ol>
-<li>
-<p>配置 <code>bindIp</code> 来控制那些人可以访问 mongodb 服务，在 <code>/etc/mongod.conf</code> 添加如下内容</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>net:
-</span></span><span style="display:flex;"><span>  port: 27017  # 修改了 port 内容，不使用默认端口加强安全性
-</span></span><span style="display:flex;"><span>  bindIp: 0.0.0.0 # 配置允许远程连接访问
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>配置 <code>replSetName</code> 参数，注意三个服务的配置文件里，这个值是一摸一样的！</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>replication:
-</span></span><span style="display:flex;"><span>  replSetName: rs0
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>配置 <code>keyFile</code> 参数让副本成员质检通过 keyFile 进行身份校验</p>
-<ol>
-<li>
-<p>生成 keyfile 文件到 <code>/data/mongo/mongodb.key</code></p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>openssl rand -base64 756 &gt; /data/mongo/mongodb.key
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>在 <code>/etc/mongod.conf</code> 中配置 <code>keyFile</code></p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>security:
-</span></span><span style="display:flex;"><span>  keyFile: /data/mongo/mongodb.key
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ol>
-</li>
-</ol>
-<p>到此，配置完成。</p>
-<h3 id="启动">启动<a hidden class="anchor" aria-hidden="true" href="#启动">#</a></h3>
-<p>我们这里使用的是 systemd(systemctl) 方式，service 方式可参考<a href="https://www.mongodb.com/docs/v4.4/tutorial/install-mongodb-on-ubuntu/">官方文档</a>。分别在三个节点中执行如下命令启动 <code>mongo</code></p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo service mongod start
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="初始化集群">初始化集群<a hidden class="anchor" aria-hidden="true" href="#初始化集群">#</a></h2>
-<ol>
-<li>
-<p>使用 <code>mongo</code> 连接到服务</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mongo 127.0.0.1:27017
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>初始化集群</p>
+<p>设置过期时间，根据需要设置，我这里选的是 0，设置不过期。</p>
 <div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
@@ -528,66 +461,168 @@
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">5
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">6
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">7
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rs.initiate( {
-</span></span><span style="display:flex;"><span>   _id : &#34;rs0&#34;,
-</span></span><span style="display:flex;"><span>   members: [
-</span></span><span style="display:flex;"><span>      { _id: 0, host: &#34;mongo1:27017&#34; },
-</span></span><span style="display:flex;"><span>      { _id: 1, host: &#34;mongo2:27017&#34; },
-</span></span><span style="display:flex;"><span>      { _id: 2, host: &#34;mongo3:27017&#34; }
-</span></span><span style="display:flex;"><span>   ]
-</span></span><span style="display:flex;"><span>})
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Please specify how long the key should be valid.
+</span></span><span style="display:flex;"><span>      0 = key does not expire
+</span></span><span style="display:flex;"><span>   &lt;n&gt;  = key expires in n days
+</span></span><span style="display:flex;"><span>   &lt;n&gt;w = key expires in n weeks
+</span></span><span style="display:flex;"><span>   &lt;n&gt;m = key expires in n months
+</span></span><span style="display:flex;"><span>   &lt;n&gt;y = key expires in n years
+</span></span><span style="display:flex;"><span>Key is valid for? (0) 
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 <li>
-<p>集群连接用户创建，这里我们创建用户名为 <code>root</code> 的用户</p>
+<p>过期时间选择之后，会提示确认上述的操作，直接输入 <code>y</code> 确认。</p>
+</li>
+<li>
+<p>设置相关的用户标识。上一步确认之后，会提示输入用户名，邮箱和注释这三个内容，按自己的情况输入即可。输入并确认后 GPG 密钥则生成。</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>GnuPG needs to construct a user ID to identify your key.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Real name: name
+</span></span><span style="display:flex;"><span>Email address: name@example.com
+</span></span><span style="display:flex;"><span>Comment:
+</span></span><span style="display:flex;"><span>You selected this USER-ID:
+</span></span><span style="display:flex;"><span>    &#34;name &lt;name@example.com&gt;&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h3 id="查看已经生成的密钥">查看已经生成的密钥<a hidden class="anchor" aria-hidden="true" href="#查看已经生成的密钥">#</a></h3>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>gpg --list-secret-keys --keyid-format=long
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>显示如下(相关内容已经过处理)：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sec   ed25519/5D4C3FXXXXXX2034EF xxxx-xx-xx [SC]
+</span></span><span style="display:flex;"><span>      D27B94066FFDEDXXXXXXXD4885D4C3F97ASD034EF
+</span></span><span style="display:flex;"><span>uid                 [ultimate] name &lt;name@example.com&gt;
+</span></span><span style="display:flex;"><span>ssb   cv25519/901FXXXAXX204X8C xxxx-xx-xx [E]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="导出公钥">导出公钥<a hidden class="anchor" aria-hidden="true" href="#导出公钥">#</a></h3>
+<p>这里公钥的导出以上面的 <code>5D4C3FXXXXXX2034EF</code> 为例，命令如下：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>gpg --armor --export 5D4C3FXXXXXX2034EF
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>显示的公钥格式如下（中间的具体内容以 <code>···</code> 代替）：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>-----BEGIN PGP PUBLIC KEY BLOCK-----
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>-----END PGP PUBLIC KEY BLOCK-----
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="配置-git-提交时签名">配置 Git 提交时签名<a hidden class="anchor" aria-hidden="true" href="#配置-git-提交时签名">#</a></h2>
+<h3 id="github-配置密钥">Github 配置密钥<a hidden class="anchor" aria-hidden="true" href="#github-配置密钥">#</a></h3>
+<ol>
+<li>
+<p>我们先<a href="#%E6%9F%A5%E7%9C%8B%E5%B7%B2%E7%BB%8F%E7%94%9F%E6%88%90%E7%9A%84%E5%AF%86%E9%92%A5">导出当前要使用的公钥</a></p>
+</li>
+<li>
+<p>点击 Github 右上角的头像，点击 <code>Settings</code> 选项。</p>
+</li>
+<li>
+<p>在左侧的页面单击 <code>SSH and GPG keys</code> 选项。</p>
+</li>
+<li>
+<p>在 <code>GPG keys</code> 旁边，点击 <code>New GPG key</code> 按钮。</p>
+</li>
+<li>
+<p>在新页中的 <code>Title</code> 输入自己的备注信息，在 <code>Key</code> 中填入第一步中导出的公钥。</p>
+</li>
+<li>
+<p>点击 <code>Add key</code> 按钮，公钥添加成功。</p>
+</li>
+</ol>
+<h3 id="本地配置">本地配置<a hidden class="anchor" aria-hidden="true" href="#本地配置">#</a></h3>
+<ol>
+<li>
+<p>配置本地 Git 签名使用的密钥 ID，我们这里使用的密钥 ID 为：<code>5D4C3FXXXXXX2034EF</code> (与配置在 Github 里面的保持一致)。</p>
 <div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
 </span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>use admin # 切换到 admin 用户
-</span></span><span style="display:flex;"><span>db.createUser({user:&#39;root&#39;, pwd:&#39;xxxx&#39;, roles: [&#39;root&#39;]}) # 创建用户名为 root， 密码为 xxxx， 角色为 root 的用户 
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># 这里添加 --global 表示设置为全局</span>
+</span></span><span style="display:flex;"><span>git config --global user.signingkey 5D4C3FXXXXXX2034EF
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
-</ol>
-<h2 id="测试连接">测试连接<a hidden class="anchor" aria-hidden="true" href="#测试连接">#</a></h2>
-<blockquote>
-<p>⚠️ 阿里云等云服务主机需要修改安全组策略开通 27017 服务端口</p>
-</blockquote>
-<p>使用如下命令进行连通性测试：</p>
+<li>
+<p>配置默认对所有提交进行签名，命令如下：</p>
 <div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mongo mongodb://root:xxxx@mongo1:27017,mongo2:27017,mongo3:27017
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git config --global commit.gpgsign <span style="color:#fff;font-weight:bold">true</span>
 </span></span></code></pre></td></tr></table>
 </div>
+</div></li>
+<li>
+<p>可以使用 <code>--unset</code> 取消指定的签名 ID。如下：</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git config --global --unset user.signingkey
+</span></span></code></pre></td></tr></table>
 </div>
+</div></li>
+</ol>
+
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://puffinjiang.github.io/tags/mongodb4.4/">MongoDB4.4</a></li>
-      <li><a href="https://puffinjiang.github.io/tags/replica-set/">Replica Set</a></li>
+      <li><a href="https://puffinjiang.github.io/tags/signing-git-commits/">Signing Git Commits</a></li>
+      <li><a href="https://puffinjiang.github.io/tags/windows/">Windows</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://puffinjiang.github.io/posts/solution/signingcommitsofgitonwindows/">
-    <span class="title">« Prev</span>
-    <br>
-    <span>Signing Commits Of Git On Windows</span>
-  </a>
-  <a class="next" href="https://puffinjiang.github.io/posts/learning/usingapachebenchonfreebsd/">
+  <a class="next" href="https://puffinjiang.github.io/posts/solution/mongodbreplicasetservicesdeployment/">
     <span class="title">Next »</span>
     <br>
-    <span>在 FreeBSD 上使用Apache Bench 进行性能压力测试</span>
+    <span>MongoDB4.4 副本集服务部署</span>
   </a>
 </nav>
 

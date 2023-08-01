@@ -3,7 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://puffinjiang.github.io/categories/</loc>
-    <lastmod>2023-07-28T19:23:12+08:00</lastmod>
+    <lastmod>2023-07-28T20:02:50+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/</loc>
+    <lastmod>2023-07-28T20:02:50+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/solution/signingcommitsofgitonwindows/</loc>
+    <lastmod>2023-07-28T20:02:50+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/signing-git-commits/</loc>
+    <lastmod>2023-07-28T20:02:50+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/signing-git-commits/</loc>
+    <lastmod>2023-07-28T20:02:50+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/</loc>
+    <lastmod>2023-07-28T20:02:50+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/windows/</loc>
+    <lastmod>2023-07-28T20:02:50+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/windows/</loc>
+    <lastmod>2023-07-28T20:02:50+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/mongodb4.4/</loc>
     <lastmod>2023-07-28T19:23:12+08:00</lastmod>
@@ -14,16 +35,10 @@
     <loc>https://puffinjiang.github.io/posts/solution/mongodbreplicasetservicesdeployment/</loc>
     <lastmod>2023-07-28T19:23:12+08:00</lastmod>
   </url><url>
-    <loc>https://puffinjiang.github.io/</loc>
-    <lastmod>2023-07-28T19:23:12+08:00</lastmod>
-  </url><url>
     <loc>https://puffinjiang.github.io/tags/replica-set/</loc>
     <lastmod>2023-07-28T19:23:12+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/categories/replica-set/</loc>
-    <lastmod>2023-07-28T19:23:12+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/</loc>
     <lastmod>2023-07-28T19:23:12+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/apache-bench/</loc>
@@ -121,12 +136,6 @@
   </url><url>
     <loc>https://puffinjiang.github.io/posts/solution/gitlabcierror/</loc>
     <lastmod>2023-06-16T19:34:44+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/windows/</loc>
-    <lastmod>2023-05-26T10:04:43+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/categories/windows/</loc>
-    <lastmod>2023-05-26T10:04:43+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/posts/learning/windowsusagetips/</loc>
     <lastmod>2023-05-26T10:04:43+08:00</lastmod>
