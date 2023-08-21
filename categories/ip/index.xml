@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>IP on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/categories/ip/</link>
+    <description>Recent content in IP on Puffin Jiang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Puffin Jiang</copyright>
+    <lastBuildDate>Sun, 20 Aug 2023 21:10:41 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/ip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Check Your Own IP</title>
+      <link>https://puffinjiang.github.io/posts/solution/%E5%A6%82%E4%BD%95%E6%9F%A5%E8%AF%A2%E8%87%AA%E5%B7%B1%E7%9A%84-ip-%E5%9C%B0%E5%9D%80/</link>
+      <pubDate>Sun, 20 Aug 2023 21:10:41 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/%E5%A6%82%E4%BD%95%E6%9F%A5%E8%AF%A2%E8%87%AA%E5%B7%B1%E7%9A%84-ip-%E5%9C%B0%E5%9D%80/</guid>
+      <description>如何查询自己的 IP 地址</description>
+    </item>
+    
+  </channel>
+</rss>
