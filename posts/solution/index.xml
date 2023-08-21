@@ -9,6 +9,15 @@
     <copyright>Puffin Jiang</copyright>
     <lastBuildDate>Wed, 24 Aug 2022 12:41:35 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/posts/solution/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Data Duplication In Mysql Using Order By And Limit Pagination</title>
+      <link>https://puffinjiang.github.io/posts/solution/dataduplicationinmysqlusingorderbyandlimitpagination/</link>
+      <pubDate>Mon, 07 Aug 2023 19:47:55 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/dataduplicationinmysqlusingorderbyandlimitpagination/</guid>
+      <description>在 Mysql 使用 ORDER BY 和 LIMIT 分页时数据重复</description>
+    </item>
+    
+    <item>
       <title>Signing Commits Of Git On Windows</title>
       <link>https://puffinjiang.github.io/posts/solution/signingcommitsofgitonwindows/</link>
       <pubDate>Fri, 28 Jul 2023 20:02:50 +0800</pubDate>
