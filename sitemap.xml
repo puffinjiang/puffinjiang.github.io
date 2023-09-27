@@ -2,22 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://puffinjiang.github.io/posts/solution/acceleratorofmavenprojectwithgitlabcicd/</loc>
-    <lastmod>2023-08-22T21:58:44+08:00</lastmod>
-  </url><url>
     <loc>https://puffinjiang.github.io/categories/</loc>
+    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/pigz/</loc>
+    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/pigz/</loc>
+    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/</loc>
+    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/speed-up/</loc>
+    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/speed-up/</loc>
+    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/solution/speeduptarfilecompressionwithpigz/</loc>
+    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/</loc>
+    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/tar/</loc>
+    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/tar/</loc>
+    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/solution/acceleratorofmavenprojectwithgitlabcicd/</loc>
     <lastmod>2023-08-22T21:58:44+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/gitlab/</loc>
     <lastmod>2023-08-22T21:58:44+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/categories/gitlab/</loc>
-    <lastmod>2023-08-22T21:58:44+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/</loc>
-    <lastmod>2023-08-22T21:58:44+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/</loc>
     <lastmod>2023-08-22T21:58:44+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/posts/solution/%E5%A6%82%E4%BD%95%E6%9F%A5%E8%AF%A2%E8%87%AA%E5%B7%B1%E7%9A%84-ip-%E5%9C%B0%E5%9D%80/</loc>
