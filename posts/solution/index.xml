@@ -18,6 +18,15 @@
     </item>
     
     <item>
+      <title>Exceeded Storage Quota When Uploading To Seafile</title>
+      <link>https://puffinjiang.github.io/posts/solution/exceededstoragequotawhenuploadingtoseafile/</link>
+      <pubDate>Wed, 27 Sep 2023 15:47:45 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/exceededstoragequotawhenuploadingtoseafile/</guid>
+      <description>Reslove Exceeded Storage Quota When Uploading To Seafile</description>
+    </item>
+    
+    <item>
       <title>Accelerator Of Maven Project With Gitlab CI CD</title>
       <link>https://puffinjiang.github.io/posts/solution/acceleratorofmavenprojectwithgitlabcicd/</link>
       <pubDate>Tue, 22 Aug 2023 21:58:44 +0800</pubDate>

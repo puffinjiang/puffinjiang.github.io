@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Out of quota on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/categories/out-of-quota/</link>
+    <description>Recent content in Out of quota on Puffin Jiang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Puffin Jiang</copyright>
+    <lastBuildDate>Wed, 27 Sep 2023 15:47:45 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/out-of-quota/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exceeded Storage Quota When Uploading To Seafile</title>
+      <link>https://puffinjiang.github.io/posts/solution/exceededstoragequotawhenuploadingtoseafile/</link>
+      <pubDate>Wed, 27 Sep 2023 15:47:45 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/exceededstoragequotawhenuploadingtoseafile/</guid>
+      <description>Reslove Exceeded Storage Quota When Uploading To Seafile</description>
+    </item>
+    
+  </channel>
+</rss>
