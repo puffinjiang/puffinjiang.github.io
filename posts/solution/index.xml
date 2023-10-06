@@ -27,6 +27,15 @@
     </item>
     
     <item>
+      <title>Git Commit Message Guidelines</title>
+      <link>https://puffinjiang.github.io/posts/solution/gitcommitguidelines/</link>
+      <pubDate>Thu, 07 Sep 2023 19:28:08 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/gitcommitguidelines/</guid>
+      <description>Git Commit Message 指南</description>
+    </item>
+    
+    <item>
       <title>Accelerator Of Maven Project With Gitlab CI CD</title>
       <link>https://puffinjiang.github.io/posts/solution/acceleratorofmavenprojectwithgitlabcicd/</link>
       <pubDate>Tue, 22 Aug 2023 21:58:44 +0800</pubDate>

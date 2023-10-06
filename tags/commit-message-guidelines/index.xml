@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Commit Message Guidelines on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/tags/commit-message-guidelines/</link>
+    <description>Recent content in Commit Message Guidelines on Puffin Jiang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Puffin Jiang</copyright>
+    <lastBuildDate>Thu, 07 Sep 2023 19:28:08 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/commit-message-guidelines/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Commit Message Guidelines</title>
+      <link>https://puffinjiang.github.io/posts/solution/gitcommitguidelines/</link>
+      <pubDate>Thu, 07 Sep 2023 19:28:08 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/gitcommitguidelines/</guid>
+      <description>Git Commit Message 指南</description>
+    </item>
+    
+  </channel>
+</rss>
