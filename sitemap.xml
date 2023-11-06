@@ -3,15 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://puffinjiang.github.io/categories/</loc>
-    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
+    <lastmod>2023-11-05T16:17:49+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/nginx-upgrade/</loc>
+    <lastmod>2023-11-05T16:17:49+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/nginx-upgrade/</loc>
+    <lastmod>2023-11-05T16:17:49+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/</loc>
+    <lastmod>2023-11-05T16:17:49+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/</loc>
+    <lastmod>2023-11-05T16:17:49+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/ubuntu/</loc>
+    <lastmod>2023-11-05T16:17:49+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/ubuntu/</loc>
+    <lastmod>2023-11-05T16:17:49+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/solution/upgradingnginxtothelatestonubuntu/</loc>
+    <lastmod>2023-11-05T16:17:49+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/pigz/</loc>
     <lastmod>2023-09-27T23:03:37+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/categories/pigz/</loc>
-    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/</loc>
     <lastmod>2023-09-27T23:03:37+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/speed-up/</loc>
@@ -21,9 +39,6 @@
     <lastmod>2023-09-27T23:03:37+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/posts/solution/speeduptarfilecompressionwithpigz/</loc>
-    <lastmod>2023-09-27T23:03:37+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/</loc>
     <lastmod>2023-09-27T23:03:37+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/tar/</loc>
@@ -192,12 +207,6 @@
     <lastmod>2023-06-18T22:00:13+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/posts/learning/modifythesourceofdockeronubuntu/</loc>
-    <lastmod>2023-06-18T17:04:21+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/ubuntu/</loc>
-    <lastmod>2023-06-18T17:04:21+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/categories/ubuntu/</loc>
     <lastmod>2023-06-18T17:04:21+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/frebsd/</loc>

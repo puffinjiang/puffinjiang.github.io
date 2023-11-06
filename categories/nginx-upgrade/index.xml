@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Ubuntu on Puffin Jiang&#39;s Blog</title>
-    <link>https://puffinjiang.github.io/categories/ubuntu/</link>
-    <description>Recent content in Ubuntu on Puffin Jiang&#39;s Blog</description>
+    <title>Nginx Upgrade on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/categories/nginx-upgrade/</link>
+    <description>Recent content in Nginx Upgrade on Puffin Jiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Puffin Jiang</copyright>
-    <lastBuildDate>Sun, 05 Nov 2023 16:17:49 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Nov 2023 16:17:49 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/nginx-upgrade/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Upgrading Nginx To The Latest On Ubuntu</title>
       <link>https://puffinjiang.github.io/posts/solution/upgradingnginxtothelatestonubuntu/</link>
@@ -15,15 +15,6 @@
       
       <guid>https://puffinjiang.github.io/posts/solution/upgradingnginxtothelatestonubuntu/</guid>
       <description>Install base environment OS: Ubuntu 18.04.6 LTS Current Nginx: 1.18.0 Add Nginx repo 1 2 3 4 echo &amp;#34;deb http://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx&amp;#34; \ | sudo tee /etc/apt/sources.list.d/nginx.list curl -o /tmp/nginx_signing.key https://nginx.org/keys/nginx_signing.key sudo mv /tmp/nginx_signing.key /etc/apt/trusted.gpg.d/nginx_signing.asc Install Nginx 1 2 sudo apt update sudo apt install nginx Restart Nginx check the status of nginx 1 sudo systemctl status nginx.service restart nginx 1 sudo systemctl restart nginx.service</description>
-    </item>
-    
-    <item>
-      <title>Modify The Source Of Docker On Ubuntu</title>
-      <link>https://puffinjiang.github.io/posts/learning/modifythesourceofdockeronubuntu/</link>
-      <pubDate>Sun, 18 Jun 2023 17:04:21 +0800</pubDate>
-      
-      <guid>https://puffinjiang.github.io/posts/learning/modifythesourceofdockeronubuntu/</guid>
-      <description>在Ubuntu中更新docker源</description>
     </item>
     
   </channel>

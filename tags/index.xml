@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Puffin Jiang</copyright>
-    <lastBuildDate>Wed, 27 Sep 2023 23:03:37 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Nov 2023 16:17:49 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx Upgrade</title>
+      <link>https://puffinjiang.github.io/tags/nginx-upgrade/</link>
+      <pubDate>Sun, 05 Nov 2023 16:17:49 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/nginx-upgrade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://puffinjiang.github.io/tags/ubuntu/</link>
+      <pubDate>Sun, 05 Nov 2023 16:17:49 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>pigz</title>
       <link>https://puffinjiang.github.io/tags/pigz/</link>
@@ -221,15 +239,6 @@
       <pubDate>Sun, 18 Jun 2023 22:00:13 +0800</pubDate>
       
       <guid>https://puffinjiang.github.io/tags/monitor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://puffinjiang.github.io/tags/ubuntu/</link>
-      <pubDate>Sun, 18 Jun 2023 17:04:21 +0800</pubDate>
-      
-      <guid>https://puffinjiang.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     
