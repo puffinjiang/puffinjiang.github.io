@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Puffin Jiang</copyright>
-    <lastBuildDate>Sun, 05 Nov 2023 16:17:49 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Dec 2023 11:45:05 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Phone Cards</title>
+      <link>https://puffinjiang.github.io/categories/phone-cards/</link>
+      <pubDate>Sat, 02 Dec 2023 11:45:05 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/categories/phone-cards/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Nginx Upgrade</title>
       <link>https://puffinjiang.github.io/categories/nginx-upgrade/</link>
