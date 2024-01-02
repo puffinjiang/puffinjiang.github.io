@@ -20,6 +20,21 @@
     <loc>https://puffinjiang.github.io/tags/</loc>
     <lastmod>2023-12-02T11:45:05+08:00</lastmod>
   </url><url>
+    <loc>https://puffinjiang.github.io/tags/nginx/</loc>
+    <lastmod>2023-12-01T15:53:11+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/nginx/</loc>
+    <lastmod>2023-12-01T15:53:11+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/seafile/</loc>
+    <lastmod>2023-12-01T15:53:11+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/seafile/</loc>
+    <lastmod>2023-12-01T15:53:11+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/solution/seafilelargefiledownloadfailure/</loc>
+    <lastmod>2023-12-01T15:53:11+08:00</lastmod>
+  </url><url>
     <loc>https://puffinjiang.github.io/tags/nginx-upgrade/</loc>
     <lastmod>2023-11-05T16:17:49+08:00</lastmod>
   </url><url>
@@ -63,12 +78,6 @@
     <lastmod>2023-09-27T15:47:45+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/categories/out-of-quota/</loc>
-    <lastmod>2023-09-27T15:47:45+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/seafile/</loc>
-    <lastmod>2023-09-27T15:47:45+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/categories/seafile/</loc>
     <lastmod>2023-09-27T15:47:45+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/commit-message-guidelines/</loc>
@@ -219,12 +228,6 @@
     <lastmod>2023-06-18T17:04:21+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/frebsd/</loc>
-    <lastmod>2023-06-17T22:49:07+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/nginx/</loc>
-    <lastmod>2023-06-17T22:49:07+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/categories/nginx/</loc>
     <lastmod>2023-06-17T22:49:07+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/posts/learning/usenginxonfreebsd/</loc>

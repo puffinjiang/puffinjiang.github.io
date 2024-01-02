@@ -18,6 +18,24 @@
     </item>
     
     <item>
+      <title>Nginx</title>
+      <link>https://puffinjiang.github.io/categories/nginx/</link>
+      <pubDate>Fri, 01 Dec 2023 15:53:11 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/categories/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seafile</title>
+      <link>https://puffinjiang.github.io/categories/seafile/</link>
+      <pubDate>Fri, 01 Dec 2023 15:53:11 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/categories/seafile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Nginx Upgrade</title>
       <link>https://puffinjiang.github.io/categories/nginx-upgrade/</link>
       <pubDate>Sun, 05 Nov 2023 16:17:49 +0800</pubDate>
@@ -68,15 +86,6 @@
       <pubDate>Wed, 27 Sep 2023 15:47:45 +0800</pubDate>
       
       <guid>https://puffinjiang.github.io/categories/out-of-quota/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Seafile</title>
-      <link>https://puffinjiang.github.io/categories/seafile/</link>
-      <pubDate>Wed, 27 Sep 2023 15:47:45 +0800</pubDate>
-      
-      <guid>https://puffinjiang.github.io/categories/seafile/</guid>
       <description></description>
     </item>
     
@@ -248,15 +257,6 @@
       <pubDate>Sun, 18 Jun 2023 22:00:13 +0800</pubDate>
       
       <guid>https://puffinjiang.github.io/categories/monitor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nginx</title>
-      <link>https://puffinjiang.github.io/categories/nginx/</link>
-      <pubDate>Sat, 17 Jun 2023 22:49:07 +0800</pubDate>
-      
-      <guid>https://puffinjiang.github.io/categories/nginx/</guid>
       <description></description>
     </item>
     

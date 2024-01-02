@@ -9,6 +9,15 @@
     <copyright>Puffin Jiang</copyright>
     <lastBuildDate>Wed, 24 Aug 2022 12:41:35 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/posts/solution/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Seafile Large File Download Failure</title>
+      <link>https://puffinjiang.github.io/posts/solution/seafilelargefiledownloadfailure/</link>
+      <pubDate>Fri, 01 Dec 2023 15:53:11 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/seafilelargefiledownloadfailure/</guid>
+      <description>Seafile Large File Download Failure with Nginx Reverse Proxy Configuration</description>
+    </item>
+    
+    <item>
       <title>Upgrading Nginx To The Latest On Ubuntu</title>
       <link>https://puffinjiang.github.io/posts/solution/upgradingnginxtothelatestonubuntu/</link>
       <pubDate>Sun, 05 Nov 2023 16:17:49 +0800</pubDate>
