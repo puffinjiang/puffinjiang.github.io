@@ -18,6 +18,15 @@
     </item>
     
     <item>
+      <title>Applying For An Ssl Certificate With Acme</title>
+      <link>https://puffinjiang.github.io/posts/solution/applyingforansslcertificatewithacme/</link>
+      <pubDate>Tue, 21 Nov 2023 21:02:55 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/applyingforansslcertificatewithacme/</guid>
+      <description>使用 acme 配置 免费的 ssl 证书并自动更新</description>
+    </item>
+    
+    <item>
       <title>Upgrading Nginx To The Latest On Ubuntu</title>
       <link>https://puffinjiang.github.io/posts/solution/upgradingnginxtothelatestonubuntu/</link>
       <pubDate>Sun, 05 Nov 2023 16:17:49 +0800</pubDate>

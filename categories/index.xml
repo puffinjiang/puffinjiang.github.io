@@ -45,6 +45,24 @@
     </item>
     
     <item>
+      <title>ACME</title>
+      <link>https://puffinjiang.github.io/categories/acme/</link>
+      <pubDate>Tue, 21 Nov 2023 21:02:55 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/categories/acme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSL</title>
+      <link>https://puffinjiang.github.io/categories/ssl/</link>
+      <pubDate>Tue, 21 Nov 2023 21:02:55 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/categories/ssl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Nginx Upgrade</title>
       <link>https://puffinjiang.github.io/categories/nginx-upgrade/</link>
       <pubDate>Sun, 05 Nov 2023 16:17:49 +0800</pubDate>
