@@ -105,7 +105,7 @@
   "keywords": [
     "Nginx", "SSL", "ACME"
   ],
-  "articleBody": "背景 准备把所有的 http 服务全部升级到 https。如果使用服务商提供的 ssl 免费证书服务，都有一定的限制，如腾讯云证书只有 1 年，阿里云证书有效期 3 个月等等。想找一个配置完成后就不需要再关注的方式，于是找到了 acme。\n安装 使用如下命令安装：\n1 curl https://get.acme.sh | sh -s email=my@example.com 此命令会将 acme.sh 安装到你的 home 目录下，通过 cd 查看安装的相关文件。\n1 cd ~/.acme.sh/ 此命令会自动创建一个定时任务，每天 00:00:00 自动检测所有证书，如果快过期了，会自动更新相关证书。\n证书签发 acme 支持签发单域名证书和多域名证书，我这里签发的是单域名证书（以 www.mydomain.com 为例）。签发证书过程正需要进行域名所有权的验证，有两种验证方式：http 和 dns 验证。\nhttp 验证 http 方式验证需要在网站根目录下放一个文件，来验证域名所有权，完成验证就可以生成证书了。如果是 apache 或者 nginx， acme 还可以智能的从 apache 或 nginx 的配置中自动完成验证，不需要你指定网站根目录。我这里使用的是 nginx 模式签发，故略过其他方式，感兴趣的可以看相关文档\n使用 apache 模式签发 略过\n使用 Nginx 模式签发 ⚠️ 此处需保持 nginx 的 80 端口已被监听。\n1 acme.sh --issue -d www.mydomain.com --nginx dns 验证 我这里没有使用 dns 的方式验证，故略过，如果想使用此方式的，可查看相关文档\n将证书安装到 Nginx 默认生成的证书都放在安装目录下： ~/.acme.sh/，不要直接使用此目录下的文件，可能会发生变化，我们应该使用 --install-cert 将证书文件复制到目标文件。我这里将文件放到路径 /etc/nginx/cert/ 下 命令如下：\n1 2 3 4 acme.sh --install-cert -d www.mydomain.com \\ --key-file /etc/nginx/cert/www.mydomain.com.key \\ --fullchain-file /etc/nginx/cert/www.mydomain.com.pem \\ --reloadcmd \"service nginx force-reload\" 问题 网络问题导致下载 acme.sh 超时 使用如下方式下载：\n1 2 3 git clone https://gitee.com/neilpang/acme.sh.git cd acme.sh ./acme.sh --install -m my@example.com Nginx 配置 80 rewrite 导致证书签发失败 原配置如下：\n1 2 3 4 5 server { listen 80; server_name ssln.top; rewrite ^(.*)$ ${server_name}$1 permanent; } 修改后的配置：\n1 2 3 4 5 6 7 8 server { listen 80; server_name ssln.top; #rewrite ^(.*)$ ${server_name}$1 permanent; location / { return 301 https://$host$request_uri; } } ",
+  "articleBody": "背景 准备把所有的 http 服务全部升级到 https。如果使用服务商提供的 ssl 免费证书服务，都有一定的限制，如腾讯云证书只有 1 年，阿里云证书有效期 3 个月等等。想找一个配置完成后就不需要再关注的方式，于是找到了 acme。\n安装 使用如下命令安装：\n1 curl https://get.acme.sh | sh -s email=my@example.com 此命令会将 acme.sh 安装到你的 home 目录下，通过 cd 查看安装的相关文件。\n1 cd ~/.acme.sh/ 此命令会自动创建一个定时任务，每天 00:00:00 自动检测所有证书，如果快过期了，会自动更新相关证书。\n证书签发 acme 支持签发单域名证书和多域名证书，我这里签发的是单域名证书（以 www.mydomain.com 为例）。签发证书过程正需要进行域名所有权的验证，有两种验证方式：http 和 dns 验证。\nhttp 验证 http 方式验证需要在网站根目录下放一个文件，来验证域名所有权，完成验证就可以生成证书了。如果是 apache 或者 nginx， acme 还可以智能的从 apache 或 nginx 的配置中自动完成验证，不需要你指定网站根目录。我这里使用的是 nginx 模式签发，故略过其他方式，感兴趣的可以看相关文档\n使用 apache 模式签发 略过\n使用 Nginx 模式签发 ⚠️ 此处需保持 nginx 的 80 端口已被监听。\n1 acme.sh --issue -d www.mydomain.com --nginx dns 验证 我这里没有使用 dns 的方式验证，故略过，如果想使用此方式的，可查看相关文档\n将证书安装到 Nginx 默认生成的证书都放在安装目录下： ~/.acme.sh/，不要直接使用此目录下的文件，可能会发生变化，我们应该使用 --install-cert 将证书文件复制到目标文件。我这里将文件放到路径 /etc/nginx/cert/ 下 命令如下：\n1 2 3 4 acme.sh --install-cert -d www.mydomain.com \\ --key-file /etc/nginx/cert/www.mydomain.com.key \\ --fullchain-file /etc/nginx/cert/www.mydomain.com.pem \\ --reloadcmd \"service nginx force-reload\" 问题 网络问题导致下载 acme.sh 超时 使用如下方式下载：\n1 2 3 git clone https://gitee.com/neilpang/acme.sh.git cd acme.sh ./acme.sh --install -m my@example.com Nginx 配置 80 rewrite 导致证书签发失败 原配置如下：\n1 2 3 4 5 server { listen 80; server_name www.mydomain.com; rewrite ^(.*)$ ${server_name}$1 permanent; } 修改后的配置：\n1 2 3 4 5 6 7 8 server { listen 80; server_name www.mydomain.com; #rewrite ^(.*)$ ${server_name}$1 permanent; location / { return 301 https://$host$request_uri; } } ",
   "wordCount" : "689",
   "inLanguage": "en",
   "datePublished": "2023-11-21T21:02:55+08:00",
@@ -431,7 +431,7 @@
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>server {
 </span></span><span style="display:flex;"><span>    listen 80;
-</span></span><span style="display:flex;"><span>    server_name ssln.top;
+</span></span><span style="display:flex;"><span>    server_name www.mydomain.com;
 </span></span><span style="display:flex;"><span>    rewrite ^(.*)$ ${server_name}$1 permanent;
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></td></tr></table>
@@ -451,7 +451,7 @@
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>server {
 </span></span><span style="display:flex;"><span>    listen 80;
-</span></span><span style="display:flex;"><span>    server_name ssln.top;
+</span></span><span style="display:flex;"><span>    server_name www.mydomain.com;
 </span></span><span style="display:flex;"><span>    #rewrite ^(.*)$ ${server_name}$1 permanent;
 </span></span><span style="display:flex;"><span>    location / {
 </span></span><span style="display:flex;"><span>            return 301 https://$host$request_uri;
