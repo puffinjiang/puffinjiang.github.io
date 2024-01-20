@@ -7,7 +7,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Puffin Jiang</copyright>
-    <lastBuildDate>Wed, 17 Jan 2024 20:54:56 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Jan 2024 22:29:56 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ASGI</title>
+      <link>https://puffinjiang.github.io/tags/asgi/</link>
+      <pubDate>Fri, 19 Jan 2024 22:29:56 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/asgi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Daphne</title>
+      <link>https://puffinjiang.github.io/tags/daphne/</link>
+      <pubDate>Fri, 19 Jan 2024 22:29:56 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/daphne/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Django</title>
+      <link>https://puffinjiang.github.io/tags/django/</link>
+      <pubDate>Fri, 19 Jan 2024 22:29:56 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://puffinjiang.github.io/tags/docker/</link>
+      <pubDate>Fri, 19 Jan 2024 22:29:56 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Supervisor</title>
+      <link>https://puffinjiang.github.io/tags/supervisor/</link>
+      <pubDate>Fri, 19 Jan 2024 22:29:56 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/tags/supervisor/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>SSH</title>
       <link>https://puffinjiang.github.io/tags/ssh/</link>
@@ -275,15 +320,6 @@
       <pubDate>Sat, 24 Jun 2023 18:28:30 +0800</pubDate>
       
       <guid>https://puffinjiang.github.io/tags/telegraf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://puffinjiang.github.io/tags/docker/</link>
-      <pubDate>Sun, 18 Jun 2023 22:00:13 +0800</pubDate>
-      
-      <guid>https://puffinjiang.github.io/tags/docker/</guid>
       <description></description>
     </item>
     

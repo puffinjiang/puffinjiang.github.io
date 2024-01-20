@@ -9,6 +9,15 @@
     <copyright>Puffin Jiang</copyright>
     <lastBuildDate>Wed, 24 Aug 2022 12:41:51 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/posts/learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Deploy Django Asgi Server With Supervisor And Daphne In Docker</title>
+      <link>https://puffinjiang.github.io/posts/learning/deploydjangoasgiserverwithsupervisoranddaphneindocker/</link>
+      <pubDate>Fri, 19 Jan 2024 22:29:56 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/learning/deploydjangoasgiserverwithsupervisoranddaphneindocker/</guid>
+      <description>Deploy django asgi server with supervisor and daphne in docker and managed with docker-compose</description>
+    </item>
+    
+    <item>
       <title>在 FreeBSD 上使用Apache Bench 进行性能压力测试</title>
       <link>https://puffinjiang.github.io/posts/learning/usingapachebenchonfreebsd/</link>
       <pubDate>Tue, 18 Jul 2023 17:30:59 +0800</pubDate>

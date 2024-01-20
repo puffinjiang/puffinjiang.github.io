@@ -2,11 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://puffinjiang.github.io/tags/asgi/</loc>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/asgi/</loc>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
+  </url><url>
     <loc>https://puffinjiang.github.io/categories/</loc>
-    <lastmod>2024-01-17T20:54:56+08:00</lastmod>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/daphne/</loc>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/daphne/</loc>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/posts/learning/deploydjangoasgiserverwithsupervisoranddaphneindocker/</loc>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/django/</loc>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/django/</loc>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/docker/</loc>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/docker/</loc>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/</loc>
-    <lastmod>2024-01-17T20:54:56+08:00</lastmod>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/supervisor/</loc>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/categories/supervisor/</loc>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
+  </url><url>
+    <loc>https://puffinjiang.github.io/tags/</loc>
+    <lastmod>2024-01-19T22:29:56+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/categories/ssh/</loc>
     <lastmod>2024-01-17T20:54:56+08:00</lastmod>
@@ -15,9 +51,6 @@
     <lastmod>2024-01-17T20:54:56+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/posts/solution/sshfailedwithserverchanged/</loc>
-    <lastmod>2024-01-17T20:54:56+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/</loc>
     <lastmod>2024-01-17T20:54:56+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/posts/summary/getmimetypesoffileinpython/</loc>
@@ -241,12 +274,6 @@
   </url><url>
     <loc>https://puffinjiang.github.io/categories/telegraf/</loc>
     <lastmod>2023-06-24T18:28:30+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/tags/docker/</loc>
-    <lastmod>2023-06-18T22:00:13+08:00</lastmod>
-  </url><url>
-    <loc>https://puffinjiang.github.io/categories/docker/</loc>
-    <lastmod>2023-06-18T22:00:13+08:00</lastmod>
   </url><url>
     <loc>https://puffinjiang.github.io/tags/monitor/</loc>
     <lastmod>2023-06-18T22:00:13+08:00</lastmod>
