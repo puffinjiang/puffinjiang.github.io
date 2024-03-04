@@ -9,6 +9,15 @@
     <copyright>Puffin Jiang</copyright>
     <lastBuildDate>Wed, 24 Aug 2022 12:41:51 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/posts/learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Deploying NFS Service On FreeBSD</title>
+      <link>https://puffinjiang.github.io/posts/learning/deployingnfsserviceonfreebsd/</link>
+      <pubDate>Mon, 04 Mar 2024 19:15:00 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/learning/deployingnfsserviceonfreebsd/</guid>
+      <description>Deploying NFS Service On FreeBSD And Make It Available To My Mac</description>
+    </item>
+    
+    <item>
       <title>Deploy Django Asgi Server With Supervisor And Daphne In Docker</title>
       <link>https://puffinjiang.github.io/posts/learning/deploydjangoasgiserverwithsupervisoranddaphneindocker/</link>
       <pubDate>Fri, 19 Jan 2024 22:29:56 +0800</pubDate>
