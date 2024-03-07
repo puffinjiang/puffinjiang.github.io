@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Puffin Jiang</copyright>
-    <lastBuildDate>Mon, 04 Mar 2024 19:15:00 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Mar 2024 23:37:04 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FreeBSD</title>
       <link>https://puffinjiang.github.io/categories/freebsd/</link>
-      <pubDate>Mon, 04 Mar 2024 19:15:00 +0800</pubDate>
+      <pubDate>Thu, 07 Mar 2024 23:37:04 +0800</pubDate>
       
       <guid>https://puffinjiang.github.io/categories/freebsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NTFS</title>
+      <link>https://puffinjiang.github.io/categories/ntfs/</link>
+      <pubDate>Thu, 07 Mar 2024 23:37:04 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/categories/ntfs/</guid>
       <description></description>
     </item>
     
