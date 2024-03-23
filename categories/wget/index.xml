@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>wget on Puffin Jiang&#39;s Blog</title>
+    <link>https://puffinjiang.github.io/categories/wget/</link>
+    <description>Recent content in wget on Puffin Jiang&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Puffin Jiang</copyright>
+    <lastBuildDate>Sat, 23 Mar 2024 20:29:28 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/categories/wget/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wget Install Failed With No Valid Openpgp On Ubuntu</title>
+      <link>https://puffinjiang.github.io/posts/solution/wgetinstallfailedwithnovalidopenpgponubuntu/</link>
+      <pubDate>Sat, 23 Mar 2024 20:29:28 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/wgetinstallfailedwithnovalidopenpgponubuntu/</guid>
+      <description>apt install failed without valid OpenPGP data found</description>
+    </item>
+    
+  </channel>
+</rss>
