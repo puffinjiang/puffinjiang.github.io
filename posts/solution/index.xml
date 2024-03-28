@@ -9,6 +9,15 @@
     <copyright>Puffin Jiang</copyright>
     <lastBuildDate>Wed, 24 Aug 2022 12:41:35 +0800</lastBuildDate><atom:link href="https://puffinjiang.github.io/posts/solution/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Networking With Tailscale At FreeBSD</title>
+      <link>https://puffinjiang.github.io/posts/solution/networkingwithtailscaleatfreebsd/</link>
+      <pubDate>Thu, 28 Mar 2024 23:22:16 +0800</pubDate>
+      
+      <guid>https://puffinjiang.github.io/posts/solution/networkingwithtailscaleatfreebsd/</guid>
+      <description>Networking With Tailscale At FreeBSD</description>
+    </item>
+    
+    <item>
       <title>Wget Install Failed With No Valid Openpgp On Ubuntu</title>
       <link>https://puffinjiang.github.io/posts/solution/wgetinstallfailedwithnovalidopenpgponubuntu/</link>
       <pubDate>Sat, 23 Mar 2024 20:29:28 +0800</pubDate>
