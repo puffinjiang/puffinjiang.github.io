@@ -105,8 +105,8 @@
   "keywords": [
     "Tailscale", "FreeBSD"
   ],
-  "articleBody": "Background I have a freebsd laptop at home but it doesn’t have a public ip so I can’t access it remotely, I also have a server so I’m trying to achieve access through tailscale networking.\nInstall Tailscale Here I used pkg to install tailscale\nUpdate pkg 1 pkg update Install Tailscale 1 pkg install tailscale Enable Tailscale ⚠️ It’s tailscaled not tailscale\n1 sysrc tailscaled_enable=\"YES\" Start Tailscale ⚠️ It’s tailscaled not tailscale\n1 service tailscaled start Check Tailscale 1 service tailscaled status you should see tailscale is running like this:\n1 tailscaled is running as pid 67663. Connect to server I used headscale as my server, and I tried to connect to it with authkey. For more information on how to install and use headscale, please see the official documentation.\nGenerate authkey We need to generate the authkey on the headscale server first.\n1 headscale --namespace default preauthkeys create --reusable --expiration 24h Then the authkey is like this:\n1 c9bdab8d415f53940f920ee9e729b79ee4e7298cb5acd27d Connect to server 1 tailscale up --login-server=http://:41641 --accept-routes=true --accept-dns=false --authkey=c9bdab8d415f53940f920ee9e729b79ee4e7298cb5acd27d Now you have successfully connected to the server.\nViewing nodes on the server 1 headscale node list --namespace default You can see this node on the server.\nUse ping to check connectivity between nodes You can use ping to check connectivity between nodes. My current node’s ip is 100.64.0.2 and another node’s ip is 100.64.0.1. So I use ping 100.64.0.1 to check connectivity.\n1 ping 100.64.0.1 You can see that the ping is successful like this:\n1 2 3 PING 100.64.0.1 (100.64.0.1): 56 data bytes 64 bytes from 100.64.0.1: icmp_seq=0 ttl=64 time=965.130 ms 64 bytes from 100.64.0.1: icmp_seq=1 ttl=64 time=12.775 ms You can also use tailscale netcheck to view the report of the connectivity.\n1 tailscale netcheck ",
-  "wordCount" : "289",
+  "articleBody": "Background I have a freebsd laptop at home but it doesn’t have a public ip so I can’t access it remotely, I also have a server so I’m trying to achieve access through tailscale networking.\nInstall Tailscale Here I used pkg to install tailscale\nUpdate pkg 1 pkg update Install Tailscale 1 pkg install tailscale Enable Tailscale ⚠️ It’s tailscaled not tailscale\n1 sysrc tailscaled_enable=\"YES\" Start Tailscale ⚠️ It’s tailscaled not tailscale\n1 service tailscaled start Check Tailscale 1 service tailscaled status you should see tailscale is running like this:\n1 tailscaled is running as pid 67663. Connect to server I used headscale as my server, and I tried to connect to it with authkey. For more information on how to install and use headscale, please see the official documentation.\nGenerate authkey We need to generate the authkey on the headscale server first.\n1 headscale --namespace default preauthkeys create --reusable --expiration 24h Then the authkey is like this:\n1 c9bdab8d415f53940f920ee9e729b79ee4e7298cb5acd27d Connect to server 1 tailscale up --login-server=http://:41641 --accept-routes=true --accept-dns=false --authkey=c9bdab8d415f53940f920ee9e729b79ee4e7298cb5acd27d Now you have successfully connected to the server. This exposes only that node to other nodes.\nEnable subnet routes Setting up the configuration file /etc/sysctl.conf\n1 2 echo 'net.ipv4.ip_forward = 1' \u003e\u003e /etc/sysctl.conf echo 'net.ipv6.conf.all.forwarding = 1' \u003e\u003e /etc/sysctl.conf Connect to the server, the subnet range for this node is 192.168.0.1/24.\n1 tailscale up --login-server=http://:41641 --accept-routes=true --accept-dns=false --advertise-routes=192.168.0.1/24 --authkey=c9bdab8d415f53940f920ee9e729b79ee4e7298cb5acd27d Get the node list on the server.\n1 headscale node list --namespace default You can see this node on the server. The id of this node is 3.\nEnable subnet routes in the server.\n1 2 # the id is 3, the subnet range is 192.168.0.1/24 headscale routes enable -i 3 -r \"192.168.0.1/24\" Check if subnet is enabled successfully.\n1 headscale routes list -i 3 we can see that the subnet is enabled like this:\n1 2 Route | Enabled 192.168.0.1/24 | true Viewing nodes on the server 1 headscale node list --namespace default You can see this node on the server.\nUse ping to check connectivity between nodes You can use ping to check connectivity between nodes. My current node’s ip is 100.64.0.2 and another node’s ip is 100.64.0.1. So I use ping 100.64.0.1 to check connectivity.\n1 ping 100.64.0.1 You can see that the ping is successful like this:\n1 2 3 PING 100.64.0.1 (100.64.0.1): 56 data bytes 64 bytes from 100.64.0.1: icmp_seq=0 ttl=64 time=965.130 ms 64 bytes from 100.64.0.1: icmp_seq=1 ttl=64 time=12.775 ms You can also use tailscale netcheck to view the report of the connectivity.\n1 tailscale netcheck ",
+  "wordCount" : "423",
   "inLanguage": "en",
   "datePublished": "2024-03-28T23:22:16+08:00",
   "dateModified": "2024-03-28T23:22:16+08:00",
@@ -232,7 +232,7 @@
 
 
 
-创建:&nbsp;<span title='2024-03-28 23:22:16 +0800 +0800'>2024-03-28</span>&nbsp;|&nbsp;更新:&nbsp;2024-03-28&nbsp;|&nbsp;字数:&nbsp;289字&nbsp;|&nbsp;时长: 1分钟&nbsp;|&nbsp;
+创建:&nbsp;<span title='2024-03-28 23:22:16 +0800 +0800'>2024-03-28</span>&nbsp;|&nbsp;更新:&nbsp;2024-03-28&nbsp;|&nbsp;字数:&nbsp;423字&nbsp;|&nbsp;时长: 1分钟&nbsp;|&nbsp;
 作者：Puffin Jiang
 
 </div>
@@ -266,7 +266,11 @@
                     <li>
                         <a href="#generate-authkey" aria-label="Generate authkey">Generate authkey</a></li>
                     <li>
-                        <a href="#connect-to-server-1" aria-label="Connect to server">Connect to server</a></li>
+                        <a href="#connect-to-server-1" aria-label="Connect to server">Connect to server</a><ul>
+                            
+                    <li>
+                        <a href="#enable-subnet-routes" aria-label="Enable subnet routes">Enable subnet routes</a></li></ul>
+                    </li>
                     <li>
                         <a href="#viewing-nodes-on-the-server" aria-label="Viewing nodes on the server">Viewing nodes on the server</a></li>
                     <li>
@@ -432,7 +436,81 @@
 <pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tailscale up --login-server=http://&lt;your-server-ip&gt;:41641 --accept-routes=<span style="color:#fff;font-weight:bold">true</span> --accept-dns=<span style="color:#fff;font-weight:bold">false</span> --authkey=c9bdab8d415f53940f920ee9e729b79ee4e7298cb5acd27d
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>Now you have successfully connected to the server.</p>
+</div><p>Now you have successfully connected to the server. This exposes only that node to other nodes.</p>
+<h4 id="enable-subnet-routes">Enable subnet routes<a hidden class="anchor" aria-hidden="true" href="#enable-subnet-routes">#</a></h4>
+<ol>
+<li>
+<p>Setting up the configuration file <code>/etc/sysctl.conf</code></p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>echo &#39;net.ipv4.ip_forward = 1&#39; &gt;&gt; /etc/sysctl.conf
+</span></span><span style="display:flex;"><span>echo &#39;net.ipv6.conf.all.forwarding = 1&#39; &gt;&gt; /etc/sysctl.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Connect to the server, the subnet range for this node is <code>192.168.0.1/24</code>.</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tailscale up --login-server=http://&lt;your-server-ip&gt;:41641 --accept-routes=<span style="color:#fff;font-weight:bold">true</span> --accept-dns=<span style="color:#fff;font-weight:bold">false</span> --advertise-routes=192.168.0.1/24 --authkey=c9bdab8d415f53940f920ee9e729b79ee4e7298cb5acd27d
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Get the node list on the server.</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>headscale node list --namespace default
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>You can see this node on the server. The id of this node is 3.</p>
+</li>
+<li>
+<p>Enable subnet routes in the server.</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># the id is 3, the subnet range is 192.168.0.1/24</span>
+</span></span><span style="display:flex;"><span>headscale routes <span style="color:#fff;font-weight:bold">enable</span> -i <span style="color:#ff0;font-weight:bold">3</span> -r <span style="color:#0ff;font-weight:bold">&#34;192.168.0.1/24&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Check if subnet is enabled successfully.</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>headscale routes list -i <span style="color:#ff0;font-weight:bold">3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>we can see that the subnet is enabled like this:</p>
+<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Route            | Enabled
+</span></span><span style="display:flex;"><span>192.168.0.1/24   | true
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
 <h3 id="viewing-nodes-on-the-server">Viewing nodes on the server<a hidden class="anchor" aria-hidden="true" href="#viewing-nodes-on-the-server">#</a></h3>
 <div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
